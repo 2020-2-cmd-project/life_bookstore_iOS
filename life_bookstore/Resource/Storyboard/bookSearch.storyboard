@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4gS-HM-rhm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Book Search View Controller-->
+        <scene sceneID="Fp7-Wl-QQu">
+            <objects>
+                <viewController id="4gS-HM-rhm" customClass="BookSearchViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8ux-9g-gfr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="책 검색하는 곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXM-tA-72K">
+                                <rect key="frame" x="169" y="377" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-Am-GUr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEO-Je-yHZ">
+                                        <rect key="frame" x="22" y="53" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="beH-eL-I56"/>
+                                            <constraint firstAttribute="width" constant="25" id="onm-xh-AlJ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="backButtonClicked:" destination="4gS-HM-rhm" eventType="touchUpInside" id="HhY-ac-fOy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="IZG-9f-2OR"/>
+                                    <constraint firstItem="xEO-Je-yHZ" firstAttribute="leading" secondItem="3KM-Am-GUr" secondAttribute="leading" constant="22" id="XZ7-qm-SSd"/>
+                                    <constraint firstAttribute="bottom" secondItem="xEO-Je-yHZ" secondAttribute="bottom" constant="10" id="q49-e5-JAZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3KM-Am-GUr" firstAttribute="leading" secondItem="bDx-bc-f2O" secondAttribute="leading" id="Z4A-IY-LEn"/>
+                            <constraint firstItem="3KM-Am-GUr" firstAttribute="top" secondItem="8ux-9g-gfr" secondAttribute="top" id="qkC-Zu-ebq"/>
+                            <constraint firstItem="3KM-Am-GUr" firstAttribute="trailing" secondItem="bDx-bc-f2O" secondAttribute="trailing" id="yLm-Le-rWQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bDx-bc-f2O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kkq-Ah-dfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+    </resources>
+</document>
