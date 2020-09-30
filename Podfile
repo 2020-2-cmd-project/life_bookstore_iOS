@@ -6,6 +6,11 @@ target 'life_bookstore' do
   use_frameworks!
 
   # Pods for life_bookstore
+  pod 'Alamofire', '~> 4.8.2'
+  pod 'RealmSwift' 
+  pod 'SwiftyJSON','~>4.0'
+  pod 'TextFieldEffects'
+  pod 'Kingfisher', '~> 5.0'
 
 
 
