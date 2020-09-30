@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     {
         self.navigationController?.navigationBar.isHidden = true
         print("")
+        print("")
     }
 
 
