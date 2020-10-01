@@ -66,6 +66,9 @@
                             <constraint firstItem="vb4-o4-1zz" firstAttribute="top" secondItem="yke-uH-DIk" secondAttribute="top" constant="-44" id="mvq-Zr-Mbo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="writeTitleLabel" destination="4FK-6S-RWz" id="AGB-F0-kam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUe-Od-lic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

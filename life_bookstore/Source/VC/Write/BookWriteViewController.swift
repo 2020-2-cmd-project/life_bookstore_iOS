@@ -14,13 +14,20 @@
 import UIKit
 
 class BookWriteViewController: UIViewController {
-
+    
+    @IBOutlet weak var writeTitleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        fontSetting()
         // Do any additional setup after loading the view.
     }
     
+    
+    func fontSetting()
+    {
+        self.writeTitleLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 18)
+    }
 
     @IBAction func backButtonClicked(_ sender: Any) {
         
