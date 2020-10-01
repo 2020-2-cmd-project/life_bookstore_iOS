@@ -12,14 +12,25 @@
 import UIKit
 
 class BookSearchViewController: UIViewController {
-
+    
+    @IBOutlet weak var searchTitleLabel: UILabel!
+    @IBOutlet weak var searchFieldTextLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        fontSetting()
 
         // Do any additional setup after loading the view.
     }
     
 
+    
+    func fontSetting()
+    {
+        self.searchTitleLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 18)
+        
+        self.searchFieldTextLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 15)
+    }
 
     @IBAction func backButtonClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)

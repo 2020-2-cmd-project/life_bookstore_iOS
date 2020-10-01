@@ -22,9 +22,7 @@ class ViewController: UIViewController {
     func naviSetting()
     {
         self.navigationController?.navigationBar.isHidden = true
-        print("")
-        print("")
-        print("")
+ 
     }
 
 
