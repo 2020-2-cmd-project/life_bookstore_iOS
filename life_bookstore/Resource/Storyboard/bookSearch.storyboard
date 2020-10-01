@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4gS-HM-rhm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4gS-HM-rhm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,13 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="책 검색하는 곳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXM-tA-72K">
-                                <rect key="frame" x="169" y="377" width="98" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KM-Am-GUr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                 <subviews>
@@ -37,30 +32,83 @@
                                             <action selector="backButtonClicked:" destination="4gS-HM-rhm" eventType="touchUpInside" id="HhY-ac-fOy"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="책 찾아보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IXM-tA-72K">
+                                        <rect key="frame" x="165.5" y="57" width="83" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="IXM-tA-72K" firstAttribute="centerX" secondItem="3KM-Am-GUr" secondAttribute="centerX" id="90r-BW-7zx"/>
                                     <constraint firstAttribute="height" constant="88" id="IZG-9f-2OR"/>
+                                    <constraint firstAttribute="bottom" secondItem="IXM-tA-72K" secondAttribute="bottom" constant="10" id="Ib3-h9-984"/>
                                     <constraint firstItem="xEO-Je-yHZ" firstAttribute="leading" secondItem="3KM-Am-GUr" secondAttribute="leading" constant="22" id="XZ7-qm-SSd"/>
                                     <constraint firstAttribute="bottom" secondItem="xEO-Je-yHZ" secondAttribute="bottom" constant="10" id="q49-e5-JAZ"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="searchField" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-ip-uyh">
+                                <rect key="frame" x="32" y="100" width="350" height="36"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="7kl-oB-StK">
+                                <rect key="frame" x="36" y="107" width="24" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="CsV-8I-uKC"/>
+                                    <constraint firstAttribute="height" constant="22" id="eCw-4X-uze"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="책 이름을 입력해주세요" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ogB-vA-Ysj">
+                                <rect key="frame" x="63" y="107" width="317" height="22"/>
+                                <color key="backgroundColor" red="0.93335402010000001" green="0.93323147299999998" blue="0.94117039440000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="317" id="g4k-le-Sdd"/>
+                                    <constraint firstAttribute="height" constant="22" id="m8n-RM-FPN"/>
+                                </constraints>
+                                <color key="textColor" red="0.27058823529999998" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="searchResultView" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-bn-GrP">
+                                <rect key="frame" x="23" y="151" width="368" height="709"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="bDx-bc-f2O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7kl-oB-StK" firstAttribute="top" secondItem="WQ9-ip-uyh" secondAttribute="top" constant="7" id="AY6-KZ-OO1"/>
+                            <constraint firstItem="bDx-bc-f2O" firstAttribute="trailing" secondItem="e2L-bn-GrP" secondAttribute="trailing" constant="23" id="F5Q-vu-ema"/>
+                            <constraint firstItem="bDx-bc-f2O" firstAttribute="trailing" secondItem="WQ9-ip-uyh" secondAttribute="trailing" constant="32" id="Oof-A1-7MK"/>
+                            <constraint firstItem="WQ9-ip-uyh" firstAttribute="leading" secondItem="bDx-bc-f2O" secondAttribute="leading" constant="32" id="Q9M-FW-7MA"/>
+                            <constraint firstItem="e2L-bn-GrP" firstAttribute="top" secondItem="WQ9-ip-uyh" secondAttribute="bottom" constant="15" id="Rjr-wG-8Io"/>
+                            <constraint firstItem="WQ9-ip-uyh" firstAttribute="top" secondItem="3KM-Am-GUr" secondAttribute="bottom" constant="12" id="TVR-U1-XXj"/>
+                            <constraint firstAttribute="bottom" secondItem="e2L-bn-GrP" secondAttribute="bottom" constant="36" id="Uyt-rO-P0x"/>
                             <constraint firstItem="3KM-Am-GUr" firstAttribute="leading" secondItem="bDx-bc-f2O" secondAttribute="leading" id="Z4A-IY-LEn"/>
+                            <constraint firstItem="7kl-oB-StK" firstAttribute="leading" secondItem="WQ9-ip-uyh" secondAttribute="leading" constant="4" id="jcM-ul-7zH"/>
+                            <constraint firstItem="ogB-vA-Ysj" firstAttribute="leading" secondItem="7kl-oB-StK" secondAttribute="trailing" constant="3" id="m6a-Au-6r0"/>
                             <constraint firstItem="3KM-Am-GUr" firstAttribute="top" secondItem="8ux-9g-gfr" secondAttribute="top" id="qkC-Zu-ebq"/>
+                            <constraint firstItem="e2L-bn-GrP" firstAttribute="leading" secondItem="bDx-bc-f2O" secondAttribute="leading" constant="23" id="r5H-D8-9jp"/>
+                            <constraint firstItem="ogB-vA-Ysj" firstAttribute="top" secondItem="WQ9-ip-uyh" secondAttribute="top" constant="7" id="tfX-Db-jYR"/>
                             <constraint firstItem="3KM-Am-GUr" firstAttribute="trailing" secondItem="bDx-bc-f2O" secondAttribute="trailing" id="yLm-Le-rWQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bDx-bc-f2O"/>
                     </view>
+                    <connections>
+                        <outlet property="searchFieldTextLabel" destination="ogB-vA-Ysj" id="0xB-Zp-eLI"/>
+                        <outlet property="searchTitleLabel" destination="IXM-tA-72K" id="uZi-AH-sJY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kkq-Ah-dfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="126"/>
+            <point key="canvasLocation" x="44.927536231884062" y="125.89285714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="searchField" width="311" height="36"/>
+        <image name="searchGlyph" width="24" height="22"/>
+        <image name="searchResultView" width="328" height="673"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

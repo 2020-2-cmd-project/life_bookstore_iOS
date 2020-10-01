@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         naviSetting()
+        
     }
     
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
     func naviSetting()
     {
         self.navigationController?.navigationBar.isHidden = true
+ 
     }
 
 

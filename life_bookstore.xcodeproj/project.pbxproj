@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		500ECBDC1D7E9F84A216FC5A /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */; };
+		FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83132524E6C500F53D09 /* Arita-buriL.otf */; };
+		FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */; };
+		FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */; };
+		FD2C831E2524E6C500F53D09 /* Arita-buriB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83172524E6C500F53D09 /* Arita-buriB.otf */; };
+		FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83182524E6C500F53D09 /* Arita-buriM.otf */; };
+		FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */; };
+		FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FDD436502524E7D000F96D9E /* Arita-buriSB.otf */; };
 		FDE8AE4224FE003400DC690D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4124FE003400DC690D /* AppDelegate.swift */; };
 		FDE8AE4424FE003400DC690D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4324FE003400DC690D /* SceneDelegate.swift */; };
 		FDE8AE4624FE003400DC690D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4524FE003400DC690D /* ViewController.swift */; };
@@ -26,6 +33,13 @@
 		A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
 		E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		FD2C83132524E6C500F53D09 /* Arita-buriL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriL.otf"; sourceTree = "<group>"; };
+		FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-1.otf"; sourceTree = "<group>"; };
+		FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriHL.otf"; sourceTree = "<group>"; };
+		FD2C83172524E6C500F53D09 /* Arita-buriB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriB.otf"; sourceTree = "<group>"; };
+		FD2C83182524E6C500F53D09 /* Arita-buriM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriM.otf"; sourceTree = "<group>"; };
+		FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-2.otf"; sourceTree = "<group>"; };
+		FDD4364F2524E7D000F96D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Arita-buriSB.otf"; sourceTree = "<group>"; };
 		FDE8AE3E24FE003400DC690D /* life_bookstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = life_bookstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE8AE4124FE003400DC690D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDE8AE4324FE003400DC690D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +74,6 @@
 				E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */,
 				A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -70,6 +83,20 @@
 				A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD2C83222524E6C900F53D09 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FD2C83172524E6C500F53D09 /* Arita-buriB.otf */,
+				FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */,
+				FD2C83132524E6C500F53D09 /* Arita-buriL.otf */,
+				FD2C83182524E6C500F53D09 /* Arita-buriM.otf */,
+				FDD436502524E7D000F96D9E /* Arita-buriSB.otf */,
+				FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */,
+				FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		FDE8AE3524FE003400DC690D = {
@@ -93,6 +120,7 @@
 		FDE8AE4024FE003400DC690D /* life_bookstore */ = {
 			isa = PBXGroup;
 			children = (
+				FD2C83222524E6C900F53D09 /* fonts */,
 				FDE8AE5624FE006100DC690D /* Source */,
 				FDE8AE5524FE004900DC690D /* Resource */,
 				FDE8AE4F24FE003700DC690D /* Info.plist */,
@@ -235,9 +263,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE8AE4E24FE003700DC690D /* LaunchScreen.storyboard in Resources */,
+				FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */,
+				FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */,
+				FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */,
 				FDE8AE5A24FE011800DC690D /* bookWrite.storyboard in Resources */,
 				FDE8AE5E24FE013100DC690D /* bookDetail.storyboard in Resources */,
 				FDE8AE4B24FE003700DC690D /* Assets.xcassets in Resources */,
+				FD2C831E2524E6C500F53D09 /* Arita-buriB.otf in Resources */,
+				FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */,
+				FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */,
+				FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */,
 				FDE8AE4924FE003400DC690D /* Main.storyboard in Resources */,
 				FDE8AE5C24FE012100DC690D /* bookSearch.storyboard in Resources */,
 			);
@@ -304,6 +339,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FDD436502524E7D000F96D9E /* Arita-buriSB.otf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDD4364F2524E7D000F96D9E /* Base */,
+			);
+			name = "Arita-buriSB.otf";
+			sourceTree = "<group>";
+		};
 		FDE8AE4724FE003400DC690D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
