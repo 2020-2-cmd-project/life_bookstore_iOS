@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="B0W-vP-XzG">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="B0W-vP-XzG" customClass="BookWriteViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Me-IY-jbI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-o4-1zz">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-Eb-TXe">
                                         <rect key="frame" x="22" y="53" width="25" height="25"/>
@@ -33,13 +33,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="책 작성하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FK-6S-RWz">
-                                        <rect key="frame" x="165.5" y="56" width="83" height="22"/>
+                                        <rect key="frame" x="146" y="56" width="83" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookWriteButton" translatesAutoresizingMaskIntoConstraints="NO" id="pQt-Lm-vLV">
-                                        <rect key="frame" x="354" y="54" width="41" height="24"/>
+                                        <rect key="frame" x="315" y="54" width="41" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="41" id="2e2-QI-1pZ"/>
                                             <constraint firstAttribute="height" constant="24" id="Wg7-Go-dYi"/>
@@ -57,22 +57,83 @@
                                     <constraint firstAttribute="height" constant="88" id="zug-u4-G6Y"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="서재에 들어갈 내용을 작성해주세요" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Avv-Xg-JHZ">
+                                <rect key="frame" x="26" y="112" width="220" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="8CE-Oy-kbQ"/>
+                                    <constraint firstAttribute="height" constant="57" id="t1i-Fp-BG7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcz-pZ-f5y">
+                                <rect key="frame" x="24" y="182" width="76" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="Yl0-p5-mL0"/>
+                                    <constraint firstAttribute="height" constant="28" id="shP-5h-085"/>
+                                </constraints>
+                                <state key="normal" title="카테고리">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iV2-s4-FBQ">
+                                <rect key="frame" x="286" y="182" width="76" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="FmZ-8a-INm"/>
+                                    <constraint firstAttribute="height" constant="28" id="rjh-jv-0eP"/>
+                                </constraints>
+                                <state key="normal" title="표지 넣기">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 정해진 질문이 들어갑니다?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akQ-W0-P29">
+                                <rect key="frame" x="26" y="225" width="330" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="330" id="4KZ-Da-8vb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mvn-zi-Z5V">
+                                <rect key="frame" x="299" y="112" width="50" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="3Ic-Hi-24v"/>
+                                    <constraint firstAttribute="width" constant="50" id="Qlr-Oh-SzQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="yke-uH-DIk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="akQ-W0-P29" firstAttribute="leading" secondItem="yke-uH-DIk" secondAttribute="leading" constant="26" id="3qt-A1-glk"/>
+                            <constraint firstItem="Mvn-zi-Z5V" firstAttribute="top" secondItem="vb4-o4-1zz" secondAttribute="bottom" constant="24" id="5QG-Et-Ouo"/>
+                            <constraint firstItem="Avv-Xg-JHZ" firstAttribute="top" secondItem="vb4-o4-1zz" secondAttribute="bottom" constant="24" id="C44-Vx-xqk"/>
+                            <constraint firstItem="gcz-pZ-f5y" firstAttribute="top" secondItem="Avv-Xg-JHZ" secondAttribute="bottom" constant="13" id="H5F-Rf-b3p"/>
                             <constraint firstItem="vb4-o4-1zz" firstAttribute="trailing" secondItem="yke-uH-DIk" secondAttribute="trailing" id="R4d-WZ-64W"/>
-                            <constraint firstItem="vb4-o4-1zz" firstAttribute="leading" secondItem="yke-uH-DIk" secondAttribute="leading" id="dmH-PH-nEE"/>
+                            <constraint firstItem="iV2-s4-FBQ" firstAttribute="top" secondItem="vb4-o4-1zz" secondAttribute="bottom" constant="94" id="R6p-gZ-fcv"/>
+                            <constraint firstItem="yke-uH-DIk" firstAttribute="trailing" secondItem="Mvn-zi-Z5V" secondAttribute="trailing" constant="26" id="TTT-jn-nc4"/>
+                            <constraint firstItem="akQ-W0-P29" firstAttribute="top" secondItem="gcz-pZ-f5y" secondAttribute="bottom" constant="15" id="Wrz-C6-bqE"/>
+                            <constraint firstItem="vb4-o4-1zz" firstAttribute="leading" secondItem="4Me-IY-jbI" secondAttribute="leading" id="dmH-PH-nEE"/>
                             <constraint firstItem="vb4-o4-1zz" firstAttribute="top" secondItem="yke-uH-DIk" secondAttribute="top" constant="-44" id="mvq-Zr-Mbo"/>
+                            <constraint firstItem="yke-uH-DIk" firstAttribute="trailing" secondItem="iV2-s4-FBQ" secondAttribute="trailing" constant="13" id="oz7-Ue-IT9"/>
+                            <constraint firstItem="Avv-Xg-JHZ" firstAttribute="leading" secondItem="4Me-IY-jbI" secondAttribute="leading" constant="26" id="sms-kL-KHj"/>
+                            <constraint firstItem="gcz-pZ-f5y" firstAttribute="leading" secondItem="yke-uH-DIk" secondAttribute="leading" constant="24" id="urA-8k-2Ug"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryButton" destination="gcz-pZ-f5y" id="txC-ol-1mZ"/>
+                        <outlet property="imageView" destination="Mvn-zi-Z5V" id="QsA-Ws-2cw"/>
+                        <outlet property="questionLabel" destination="akQ-W0-P29" id="TOX-Gq-ZQZ"/>
+                        <outlet property="setImageButton" destination="iV2-s4-FBQ" id="UXC-6a-BOC"/>
+                        <outlet property="writeDirectiveLabel" destination="Avv-Xg-JHZ" id="qFd-vs-FSV"/>
                         <outlet property="writeTitleLabel" destination="4FK-6S-RWz" id="AGB-F0-kam"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUe-Od-lic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266.66666666666669" y="122.54464285714285"/>
+            <point key="canvasLocation" x="266.39999999999998" y="121.92118226600985"/>
         </scene>
     </scenes>
     <resources>
