@@ -18,7 +18,10 @@ class CategoryContainerCollectionCell: UICollectionViewCell {
     func setName(name : String, shelves : [ShelfDataModel])
     {
         self.categoryName.text = name
+        
         self.categoryName.font = UIFont(name: "BareunBatangOTFPro-1", size: 16)
+        
+        
         self.shelfData = shelves
         
  

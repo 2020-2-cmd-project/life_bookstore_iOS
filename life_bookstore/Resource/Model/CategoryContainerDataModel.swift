@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 
 struct CategoryContainerDataModel
@@ -28,3 +29,12 @@ struct CategoryContainerDataModel
         self.shelves = shelves
     }
 }
+
+
+
+
+//
+//class ShelfDataModelList : Object {
+//    let books = List<BookDataModelList>()
+//    @objc dynamic var shelfIndex = -1
+//}

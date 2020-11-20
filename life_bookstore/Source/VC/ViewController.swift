@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import RealmSwift
+
 
 class ViewController: UIViewController {
+    
+    
+    
     
     
     // 컬렉션 뷰가 중첩된 형태이기 때문에 구별을 꼭 잘해야 한다 !!
@@ -20,6 +25,13 @@ class ViewController: UIViewController {
      순으로 들어간다!!
      
      */
+    
+    var categoryItems : List<CategoryContainerDataModelList>?
+    let realm = try! Realm()
+
+    
+ 
+    
     
     var categoryContainerData : [CategoryContainerDataModel] = []
     var shelfData : [ShelfDataModel] = []
@@ -38,6 +50,14 @@ class ViewController: UIViewController {
         
         self.libraryCollectionView.delegate = self
         self.libraryCollectionView.dataSource = self
+        
+        print("path =  \(Realm.Configuration.defaultConfiguration.fileURL!)")
+        
+        
+        let list = realm.objects(CategoryContainerDataModelList.self)
+        print("@@@")
+        print(list)
+
         
     }
     
@@ -73,6 +93,52 @@ class ViewController: UIViewController {
 extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource
 {
 
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if indexPath.row == categoryContainerData.count
+        {
+            
+            let alertController = UIAlertController(title: "새 카테고리 만들기" , message: "추가할 카테고리를 입력해주세요", preferredStyle: .alert)
+            
+            alertController.addTextField { (myTextField) in
+                myTextField.placeholder = "이름을 입력해주세요..."
+            }
+            let okAction = UIAlertAction(title: "확인", style: .default) { (_) in
+           
+                
+                let text = alertController.textFields?[0].text
+                
+                
+                let category = CategoryContainerDataModelList()
+                
+                category.categoryName = text ?? ""
+                category.shelves = List<ShelfDataModelList>()
+                
+                try! self.realm.write {
+                    self.realm.add(category)
+                  }
+                
+                
+                makeAlert(title: "알림", message: "카테고리가 추가되었습니다", vc: self)
+                
+                
+            }
+            
+            let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+            
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+            
+            
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
