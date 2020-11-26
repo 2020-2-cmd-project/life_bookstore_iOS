@@ -17,7 +17,7 @@ import RealmSwift
 class BookDataModelList : Object {
     
 
-     @objc dynamic var title = ""
+    @objc dynamic var title = ""
     @objc dynamic var content : String = ""
     @objc dynamic var index : Int = -1
     @objc dynamic var time : String = ""

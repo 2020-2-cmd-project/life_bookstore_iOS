@@ -32,6 +32,10 @@ class ViewController: UIViewController {
     
  
     
+    var categoryArray : [CategoryContainerDataModelList] = [] // REALM에서 조회해 와서 여기에 있는 어레이로 바꿔치기
+    var shelfArray : [ShelfDataModelList] = []
+    var bookArray : [BookDataModelList] = []
+    
     
     var categoryContainerData : [CategoryContainerDataModel] = []
     var shelfData : [ShelfDataModel] = []
@@ -54,20 +58,33 @@ class ViewController: UIViewController {
         print("path =  \(Realm.Configuration.defaultConfiguration.fileURL!)")
         
         
-        let list = realm.objects(CategoryContainerDataModelList.self)
-        print("@@@")
-        print(list)
+
 
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        dataLoadFromRealm()
+    }
+    
+    
+    
+    func dataLoadFromRealm()
+    {
+        let list = realm.objects(CategoryContainerDataModelList.self)
+        
+        let categoryRealmArray = Array(list)
+        
+        categoryArray.removeAll()
+        categoryArray = categoryRealmArray
+        
+        libraryCollectionView.reloadData()
+    }
     
     func defaultSetting() // 서버 있기전에 더미로 넣는 작업
     {
 
-        
-
-        
         let book1 = BookDataModel()
         let book2 = BookDataModel()
         bookData.append(book1)
@@ -98,7 +115,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if indexPath.row == categoryContainerData.count
+        if indexPath.row == categoryArray.count
         {
             
             let alertController = UIAlertController(title: "새 카테고리 만들기" , message: "추가할 카테고리를 입력해주세요", preferredStyle: .alert)
@@ -116,14 +133,21 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
                 
                 category.categoryName = text ?? ""
                 category.shelves = List<ShelfDataModelList>()
+                category.shelves.append(ShelfDataModelList()) // 최소한 1개의 shelves 는 필요하다 
                 
                 try! self.realm.write {
                     self.realm.add(category)
                   }
                 
                 
-                makeAlert(title: "알림", message: "카테고리가 추가되었습니다", vc: self)
+                let alert = UIAlertController(title: "알림", message: "카테고리가 추가되었습니다", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default) { (_) in
+                    self.dataLoadFromRealm()
+                }
+                alert.addAction(ok)
                 
+                
+                self.present(alert, animated: true, completion: nil)
                 
             }
             
@@ -142,17 +166,18 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-            return self.categoryContainerData.count + 1 // 추가 셀 넣기 위해서
+            return self.categoryArray.count + 1 // 추가 셀 넣기 위해서
         
 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row != self.categoryContainerData.count
+        if indexPath.row != self.categoryArray.count
         {
             guard let categoryContainerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryContainerCollectionCell", for: indexPath) as? CategoryContainerCollectionCell else { return UICollectionViewCell() }
             
-            categoryContainerCell.setName(name: self.categoryContainerData[indexPath.row].categoryName, shelves: self.shelfData)
+            let shelvesData = Array(categoryArray[indexPath.row].shelves)
+            categoryContainerCell.setName(name: categoryArray[indexPath.row].categoryName, shelves: shelvesData)
             
 
             

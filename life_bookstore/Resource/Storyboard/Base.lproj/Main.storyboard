@@ -214,17 +214,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="201"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJA-LS-6I3">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="categoryAddButton" translatesAutoresizingMaskIntoConstraints="NO" id="B6r-qL-8J0">
                                                     <rect key="frame" x="106.5" y="86" width="161" height="29"/>
-                                                    <state key="normal" image="categoryAddButton"/>
-                                                    <connections>
-                                                        <action selector="addCategoryButtonClicked:" destination="Sbn-p4-ENo" eventType="touchUpInside" id="kta-bU-kqu"/>
-                                                    </connections>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dJA-LS-6I3" firstAttribute="centerY" secondItem="xnv-QY-TJo" secondAttribute="centerY" id="0y3-Ue-ebH"/>
-                                                <constraint firstItem="dJA-LS-6I3" firstAttribute="centerX" secondItem="xnv-QY-TJo" secondAttribute="centerX" id="NUf-L7-M6J"/>
+                                                <constraint firstItem="B6r-qL-8J0" firstAttribute="centerX" secondItem="xnv-QY-TJo" secondAttribute="centerX" id="I84-JO-Jhq"/>
+                                                <constraint firstItem="B6r-qL-8J0" firstAttribute="centerY" secondItem="xnv-QY-TJo" secondAttribute="centerY" id="UTE-AI-dmk"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="374" height="201"/>
