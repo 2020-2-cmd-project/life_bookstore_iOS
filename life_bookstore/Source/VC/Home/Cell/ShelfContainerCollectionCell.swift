@@ -14,9 +14,9 @@ class ShelfContainerCollectionCell: UICollectionViewCell {
     @IBOutlet weak var shelfWidthConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var bookShelfImage: UIImageView!
-    var bookData : [BookDataModel] = []
+    var bookData : [BookDataModelList] = []
     
-    func settingBook(book : [BookDataModel])
+    func settingBook(book : [BookDataModelList])
     {
         self.bookData = book
         
@@ -43,7 +43,8 @@ extension ShelfContainerCollectionCell : UICollectionViewDelegate,UICollectionVi
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+            
+            
 
             return CGSize(width: 14, height: 80)
     }

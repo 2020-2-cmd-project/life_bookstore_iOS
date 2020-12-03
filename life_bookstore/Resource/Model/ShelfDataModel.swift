@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct ShelfDataModel
 {
@@ -29,3 +30,21 @@ struct ShelfDataModel
         self.shelfIndex = index
     }
 }
+
+
+
+//class BookDataModelList : Object {
+//
+//
+//     @objc dynamic var title = ""
+//    @objc dynamic var content : String = ""
+//    @objc dynamic var index : Int = -1
+//    @objc dynamic var time : String = ""
+//    @objc dynamic var location : String = ""
+//    @objc dynamic var color : String = ""
+//    @objc dynamic var categoryIndex : Int = -1
+//    @objc dynamic var questionIndex : Int = -1
+//
+//    let hashTag  = List<HashTagObject>()
+//
+//}

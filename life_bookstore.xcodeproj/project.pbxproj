@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500ECBDC1D7E9F84A216FC5A /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */; };
+		94E1445804BD7B0BE4DC5015 /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */; };
 		FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83132524E6C500F53D09 /* Arita-buriL.otf */; };
 		FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */; };
 		FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */; };
@@ -15,6 +15,7 @@
 		FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83182524E6C500F53D09 /* Arita-buriM.otf */; };
 		FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */; };
 		FD7F36462525EC09008ADA28 /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */; };
+		FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB966E925669FDE00DED224 /* DataModel + Realm.swift */; };
 		FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FDD436502524E7D000F96D9E /* Arita-buriSB.otf */; };
 		FDD4365625257B9700F96D9E /* BookDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4365525257B9700F96D9E /* BookDataModel.swift */; };
 		FDD4365B25257BE400F96D9E /* alertScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */; };
@@ -39,9 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
-		E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
+		BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
 		FD2C83132524E6C500F53D09 /* Arita-buriL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriL.otf"; sourceTree = "<group>"; };
 		FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-1.otf"; sourceTree = "<group>"; };
 		FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriHL.otf"; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		FD2C83182524E6C500F53D09 /* Arita-buriM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriM.otf"; sourceTree = "<group>"; };
 		FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-2.otf"; sourceTree = "<group>"; };
 		FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arita-buriSB.otf"; path = "life_bookstore/fonts/Arita-buriSB.otf"; sourceTree = "<group>"; };
+		FDB966E925669FDE00DED224 /* DataModel + Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel + Realm.swift"; sourceTree = "<group>"; };
 		FDD4364F2524E7D000F96D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Arita-buriSB.otf"; sourceTree = "<group>"; };
 		FDD4365525257B9700F96D9E /* BookDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataModel.swift; sourceTree = "<group>"; };
 		FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertScreenExtension.swift; sourceTree = "<group>"; };
@@ -79,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500ECBDC1D7E9F84A216FC5A /* Pods_life_bookstore.framework in Frameworks */,
+				94E1445804BD7B0BE4DC5015 /* Pods_life_bookstore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,16 +91,16 @@
 		22FCFCB7C688447ABA54BDE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */,
-				A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */,
+				BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */,
+				9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		43E63F8723A16580523B4454 /* Frameworks */ = {
+		F6ECC8F06A75155593CC6648 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */,
+				583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 				FDD4365525257B9700F96D9E /* BookDataModel.swift */,
 				FDD4365E2525828100F96D9E /* ShelfDataModel.swift */,
 				FDD43669252589CF00F96D9E /* CategoryContainerDataModel.swift */,
+				FDB966E925669FDE00DED224 /* DataModel + Realm.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 				FDE8AE4024FE003400DC690D /* life_bookstore */,
 				FDE8AE3F24FE003400DC690D /* Products */,
 				22FCFCB7C688447ABA54BDE7 /* Pods */,
-				43E63F8723A16580523B4454 /* Frameworks */,
+				F6ECC8F06A75155593CC6648 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDE8AE5224FE003700DC690D /* Build configuration list for PBXNativeTarget "life_bookstore" */;
 			buildPhases = (
-				4076F26683D84698D428F9B4 /* [CP] Check Pods Manifest.lock */,
+				CDC88E557FF94E85E8EFF6AA /* [CP] Check Pods Manifest.lock */,
 				FDE8AE3A24FE003400DC690D /* Sources */,
 				FDE8AE3B24FE003400DC690D /* Frameworks */,
 				FDE8AE3C24FE003400DC690D /* Resources */,
-				BD26A0538F7A9A0800D334DE /* [CP] Embed Pods Frameworks */,
+				F1953030683898E60CB8E878 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -333,7 +336,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4076F26683D84698D428F9B4 /* [CP] Check Pods Manifest.lock */ = {
+		CDC88E557FF94E85E8EFF6AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -355,7 +358,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD26A0538F7A9A0800D334DE /* [CP] Embed Pods Frameworks */ = {
+		F1953030683898E60CB8E878 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,6 +391,7 @@
 				FDD436732525A20C00F96D9E /* BookContainerCollectionCell.swift in Sources */,
 				FDD4365F2525828100F96D9E /* ShelfDataModel.swift in Sources */,
 				FDE8AE4224FE003400DC690D /* AppDelegate.swift in Sources */,
+				FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */,
 				FDD4365625257B9700F96D9E /* BookDataModel.swift in Sources */,
 				FDD4366A252589CF00F96D9E /* CategoryContainerDataModel.swift in Sources */,
 				FDE8AE4424FE003400DC690D /* SceneDelegate.swift in Sources */,
@@ -542,7 +546,7 @@
 		};
 		FDE8AE5324FE003700DC690D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */;
+			baseConfigurationReference = BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -561,7 +565,7 @@
 		};
 		FDE8AE5424FE003700DC690D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */;
+			baseConfigurationReference = 9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

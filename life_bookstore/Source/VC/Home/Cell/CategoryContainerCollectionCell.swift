@@ -13,12 +13,15 @@ class CategoryContainerCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryName: UILabel!
     
-    var shelfData : [ShelfDataModel] = []
+    var shelfData : [ShelfDataModelList] = []
     
-    func setName(name : String, shelves : [ShelfDataModel])
+    func setName(name : String, shelves : [ShelfDataModelList])
     {
         self.categoryName.text = name
+        
         self.categoryName.font = UIFont(name: "BareunBatangOTFPro-1", size: 16)
+        
+        
         self.shelfData = shelves
         
  
@@ -45,7 +48,8 @@ extension CategoryContainerCollectionCell : UICollectionViewDelegate,UICollectio
         
         guard let shelfContainerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShelfContainerCollectionCell", for: indexPath) as? ShelfContainerCollectionCell else { return UICollectionViewCell() }
         
-        shelfContainerCell.settingBook(book: self.shelfData[indexPath.row].books)
+        let bookData = Array(shelfData[indexPath.row].books)
+        shelfContainerCell.settingBook(book: bookData)
 
 
         
