@@ -12,6 +12,7 @@
 
 
 import UIKit
+import RealmSwift
 
 class BookWriteViewController: UIViewController {
     
@@ -21,6 +22,18 @@ class BookWriteViewController: UIViewController {
     @IBOutlet weak var categoryButton: UIButton!
     @IBOutlet weak var setImageButton: UIButton!
     @IBOutlet weak var questionLabel: UILabel!
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var contentTextField: UITextView!
+    @IBOutlet weak var colorPickButton: UIButton!
+    
+    
+    var bookItems : List<BookDataModelList>?
+    let realm = try! Realm()
+    
+    var bookData : [BookDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +45,15 @@ class BookWriteViewController: UIViewController {
     
     func fontSetting() {
         self.writeTitleLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 18)
-        self.writeDirectiveLabel.font = UIFont(name: "BareunBatangOTFPro-2", size: 18)
+        self.writeDirectiveLabel.font = UIFont(name: "BareunBatangOTFPro-2", size: 20)
         self.categoryButton.titleLabel?.font = UIFont(name: "BareunBatangOTFPro-1", size: 13)
         self.setImageButton.titleLabel?.font = UIFont(name: "BareunBatangOTFPro-1", size: 13)
-        self.questionLabel.font = UIFont(name: "BareunBatangOTFPro-2", size: 15)
+        self.questionLabel.font = UIFont(name: "BareunBatangOTFPro-2", size: 18)
+        
+        self.titleTextField.font = UIFont(name: "BareunBatangOTFPro-2", size: 18)
+        self.dateTextField.font = UIFont(name: "BareunBatangOTFPro-2", size: 15)
+        self.locationTextField.font = UIFont(name: "BareunBatangOTFPro-2", size: 15)
+        self.contentTextField.font = UIFont(name: "BareunBatangOTFPro-2", size: 15)
     }
     
     func buttonSetting() {
@@ -52,6 +70,12 @@ class BookWriteViewController: UIViewController {
         setImageButton.layer.shadowRadius = 10
         setImageButton.layer.shadowOpacity = 0.16
         setImageButton.layer.shadowOffset = CGSize(width: 0, height: 3)
+        
+        colorPickButton.layer.cornerRadius = 14
+        colorPickButton.layer.shadowColor = UIColor.black.cgColor
+        colorPickButton.layer.shadowRadius = 10
+        colorPickButton.layer.shadowOpacity = 0.16
+        colorPickButton.layer.shadowOffset = CGSize(width: 0, height: 3)
     }
     
     func defaultSetting() {
@@ -68,5 +92,22 @@ class BookWriteViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-
+    @IBAction func completeButtonClicked(_ sender: Any) {
+        let book = BookDataModelList()
+        
+        book.title = titleTextField.text ?? ""
+        book.content = contentTextField.text
+        book.time = dateTextField.text ?? ""
+        book.location = locationTextField.text ?? ""
+        book.color = "#fff"
+        book.categoryIndex = 0
+        book.questionIndex = 0
+        
+        try! self.realm.write {
+            self.realm.add(book)
+        }
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
