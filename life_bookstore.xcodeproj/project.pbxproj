@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94E1445804BD7B0BE4DC5015 /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */; };
+		9769A8D45ADC8431C965E508 /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D17FB6E4A0545831CF90D0 /* Pods_life_bookstore.framework */; };
 		FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83132524E6C500F53D09 /* Arita-buriL.otf */; };
 		FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */; };
 		FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */; };
@@ -40,9 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
-		BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		32841143B13F0BAC3E3187DF /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		97DAB8A55A3C27D9B36A8AAD /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
+		D5D17FB6E4A0545831CF90D0 /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C83132524E6C500F53D09 /* Arita-buriL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriL.otf"; sourceTree = "<group>"; };
 		FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-1.otf"; sourceTree = "<group>"; };
 		FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriHL.otf"; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94E1445804BD7B0BE4DC5015 /* Pods_life_bookstore.framework in Frameworks */,
+				9769A8D45ADC8431C965E508 /* Pods_life_bookstore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,16 +91,16 @@
 		22FCFCB7C688447ABA54BDE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */,
-				9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */,
+				32841143B13F0BAC3E3187DF /* Pods-life_bookstore.debug.xcconfig */,
+				97DAB8A55A3C27D9B36A8AAD /* Pods-life_bookstore.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F6ECC8F06A75155593CC6648 /* Frameworks */ = {
+		8CB35E7ADD47DFE3E564BAB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				583F5A4106B5D2A45661C13C /* Pods_life_bookstore.framework */,
+				D5D17FB6E4A0545831CF90D0 /* Pods_life_bookstore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,7 +156,7 @@
 				FDE8AE4024FE003400DC690D /* life_bookstore */,
 				FDE8AE3F24FE003400DC690D /* Products */,
 				22FCFCB7C688447ABA54BDE7 /* Pods */,
-				F6ECC8F06A75155593CC6648 /* Frameworks */,
+				8CB35E7ADD47DFE3E564BAB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,11 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDE8AE5224FE003700DC690D /* Build configuration list for PBXNativeTarget "life_bookstore" */;
 			buildPhases = (
-				CDC88E557FF94E85E8EFF6AA /* [CP] Check Pods Manifest.lock */,
+				C0F8A014CCFA6A3F2EBD6937 /* [CP] Check Pods Manifest.lock */,
 				FDE8AE3A24FE003400DC690D /* Sources */,
 				FDE8AE3B24FE003400DC690D /* Frameworks */,
 				FDE8AE3C24FE003400DC690D /* Resources */,
-				F1953030683898E60CB8E878 /* [CP] Embed Pods Frameworks */,
+				7F70188E5DC8582EB834DEEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -336,7 +336,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CDC88E557FF94E85E8EFF6AA /* [CP] Check Pods Manifest.lock */ = {
+		7F70188E5DC8582EB834DEEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0F8A014CCFA6A3F2EBD6937 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -356,23 +373,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F1953030683898E60CB8E878 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-life_bookstore/Pods-life_bookstore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -546,7 +546,7 @@
 		};
 		FDE8AE5324FE003700DC690D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDB31486D59EC7374A1569D /* Pods-life_bookstore.debug.xcconfig */;
+			baseConfigurationReference = 32841143B13F0BAC3E3187DF /* Pods-life_bookstore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -565,7 +565,7 @@
 		};
 		FDE8AE5424FE003700DC690D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F0ACF832F245B7EC1AF36F1 /* Pods-life_bookstore.release.xcconfig */;
+			baseConfigurationReference = 97DAB8A55A3C27D9B36A8AAD /* Pods-life_bookstore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

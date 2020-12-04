@@ -1,8 +1,8 @@
 PODS:
   - Alamofire (4.8.2)
-  - Kingfisher (5.15.7):
-    - Kingfisher/Core (= 5.15.7)
-  - Kingfisher/Core (5.15.7)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - Realm (10.1.4):
     - Realm/Headers (= 10.1.4)
   - Realm/Headers (10.1.4)
@@ -29,7 +29,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  Kingfisher: 6e1a13523fcb1c86924ce53affe4ac957e544d59
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
   RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
