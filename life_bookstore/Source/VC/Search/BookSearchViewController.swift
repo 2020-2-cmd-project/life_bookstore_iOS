@@ -10,15 +10,21 @@
 
 
 import UIKit
+import RealmSwift
 
 class BookSearchViewController: UIViewController {
     
     @IBOutlet weak var searchTitleLabel: UILabel!
     @IBOutlet weak var searchFieldTextLabel: UITextField!
     
+    
+    
+    let realm = try! Realm()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fontSetting()
+        searchFieldTextLabel.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -38,4 +44,13 @@ class BookSearchViewController: UIViewController {
     }
 
 
+}
+
+
+extension BookSearchViewController :UITextFieldDelegate
+{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        Realm.
+    }
 }

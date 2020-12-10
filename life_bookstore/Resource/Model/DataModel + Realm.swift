@@ -16,15 +16,16 @@ import RealmSwift
 
 class BookDataModelList : Object {
     
-
+    
     @objc dynamic var title = ""
     @objc dynamic var content : String = ""
     @objc dynamic var index : Int = -1
     @objc dynamic var time : String = ""
     @objc dynamic var location : String = ""
     @objc dynamic var color : String = ""
-    @objc dynamic var categoryIndex : Int = -1
-    @objc dynamic var questionIndex : Int = -1
+    @objc dynamic var categoryName : String = ""
+    @objc dynamic var questionName = ""
+    @objc dynamic var bookCoverPhoto = Data()
     
     var hashTag  = List<HashTagObject>()
     
@@ -54,3 +55,10 @@ class CategoryContainerDataModelList : Object
     var shelves = List<ShelfDataModelList>()
 }
 
+
+
+class QuestionDataModel : Object
+{
+    @objc dynamic var categoryName = ""
+    @objc dynamic var questionTitle = ""
+}

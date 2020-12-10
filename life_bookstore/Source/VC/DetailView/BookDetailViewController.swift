@@ -11,24 +11,94 @@
 
 
 import UIKit
+import RealmSwift
 
 class BookDetailViewController: UIViewController {
 
+    //MARK:- IBOutlet Part
+    
+    @IBOutlet weak var titleLabel: UITextView!
+    @IBOutlet weak var hashTagLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var bookCoverImageView: UIImageView!
+    @IBOutlet weak var questionTitleLabel: UILabel!
+    @IBOutlet weak var contentTextView: UITextView!
+    
+    //MARK:- Variable Part
+    
+    let realm = try! Realm()
+    var bookData = BookDataModelList()
+    
+    
+    var hashTagStringList = ""
+    
+
+    //MARK:- Constraint Part
+    
+
+    //MARK:- Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
+    //MARK:- IBAction Part
+    
 
-    /*
-    // MARK: - Navigation
+    
+    //MARK:- default Setting Function Part
+    
+    func dataLoadFromRealm()
+    {
+        
+        let bookRealmData = realm
+            .objects(BookDataModelList.self)
+            .filter("name == 'user1'")
+        
+        let bookData = bookRealmData.first
+        
+        
+        let hashTagList = Array(bookData!.hashTag)
+        
+        
+        
+        
+        if hashTagList.count > 0
+        {
+            for i in 0 ... hashTagList.count - 1
+            {
+                hashTagStringList += "#\(hashTagList[0].hashTag) "
+            }
+        }
+    
+        hashTagLabel.text = hashTagStringList
+    
+        
+        titleLabel.text = bookData?.title
+        
+        categoryLabel.text = bookData?.categoryName
+        locationLabel.text = bookData?.location
+        dateLabel.text = bookData?.time
+        
+        
+    
+        bookCoverImageView.image = UIImage(data:bookData?.bookCoverPhoto ?? Data())
+        
+        
+        questionTitleLabel.text = bookData?.questionName
+        contentTextView.text = bookData?.content
+        
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
+    //MARK:- Function Part
+    
+
+    
+    //MARK:- @objc function Part
+   
 }
+
+    //MARK:- extension 부분
