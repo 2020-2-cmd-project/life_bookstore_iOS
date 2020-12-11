@@ -104,6 +104,10 @@
                                         <state key="normal" title="카테고리">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="2zL-es-mA7"/>
+                                            <segue destination="uFk-ri-XeX" kind="presentation" id="VCX-2O-sfZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -225,6 +229,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WUe-Od-lic" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="265.21739130434787" y="121.875"/>
+        </scene>
+        <!--Book Category View Controller-->
+        <scene sceneID="fZq-qw-qNv">
+            <objects>
+                <viewController modalPresentationStyle="pageSheet" id="uFk-ri-XeX" customClass="BookCategoryViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dZ-u9-D7s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 고르기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-64-eLq">
+                                <rect key="frame" x="150" y="24" width="114" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-u3-rGU">
+                                <rect key="frame" x="0.0" y="54" width="414" height="788"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s0C-fJ-CKJ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tgg-u3-rGU" secondAttribute="bottom" id="E4Q-JS-R9h"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="trailing" secondItem="s0C-fJ-CKJ" secondAttribute="trailing" id="HQi-0o-ZDa"/>
+                            <constraint firstItem="d8T-64-eLq" firstAttribute="top" secondItem="s0C-fJ-CKJ" secondAttribute="top" constant="24" id="dJt-Qd-V00"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="leading" secondItem="s0C-fJ-CKJ" secondAttribute="leading" id="hKW-HJ-BPS"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="top" secondItem="d8T-64-eLq" secondAttribute="bottom" constant="8" symbolic="YES" id="i7D-vU-Xzb"/>
+                            <constraint firstItem="d8T-64-eLq" firstAttribute="centerX" secondItem="1dZ-u9-D7s" secondAttribute="centerX" id="jzz-Zj-2GJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VLx-xR-eOt"/>
+                    <connections>
+                        <outlet property="tableView" destination="Tgg-u3-rGU" id="eOd-7G-xUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEV-k2-LWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="121.875"/>
         </scene>
     </scenes>
     <resources>

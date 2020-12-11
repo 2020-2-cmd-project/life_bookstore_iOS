@@ -110,4 +110,7 @@ class BookWriteViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    @IBAction func categoryButtonClicked(_ sender: Any) {
+        
+    }
 }
