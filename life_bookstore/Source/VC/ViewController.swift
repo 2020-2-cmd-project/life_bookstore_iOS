@@ -37,9 +37,9 @@ class ViewController: UIViewController {
     var bookArray : [BookDataModelList] = []
     
     
-    var categoryContainerData : [CategoryContainerDataModel] = []
-    var shelfData : [ShelfDataModel] = []
-    var bookData : [BookDataModel] = []
+//    var categoryContainerData : [CategoryContainerDataModel] = []
+//    var shelfData : [ShelfDataModel] = []
+//    var bookData : [BookDataModel] = []
     
     
     @IBOutlet weak var libraryCollectionView: UICollectionView! // 가장 바깥을 감싸는 컬렉션 뷰
@@ -50,16 +50,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         naviSetting()
-        defaultSetting()
         
         self.libraryCollectionView.delegate = self
         self.libraryCollectionView.dataSource = self
         
         print("path =  \(Realm.Configuration.defaultConfiguration.fileURL!)")
         
-        
-
-
         
     }
     
@@ -76,28 +72,14 @@ class ViewController: UIViewController {
         
         let categoryRealmArray = Array(list)
         
+        
         categoryArray.removeAll()
         categoryArray = categoryRealmArray
         
         libraryCollectionView.reloadData()
     }
     
-    func defaultSetting() // 서버 있기전에 더미로 넣는 작업
-    {
 
-        let book1 = BookDataModel()
-        let book2 = BookDataModel()
-        bookData.append(book1)
-        bookData.append(book2)
-        
-        let shelf1 = ShelfDataModel(books: bookData, index: 0)
-        shelfData.append(shelf1)
-        
-        let category1 = CategoryContainerDataModel(shelves: shelfData, name: "감정")
-        categoryContainerData.append(category1)
-        
-
-    }
     
     func naviSetting()
     {

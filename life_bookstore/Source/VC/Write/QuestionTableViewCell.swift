@@ -1,18 +1,17 @@
 //
-//  CategoryTableViewCell.swift
+//  QuestionTableViewCell.swift
 //  life_bookstore
 //
-//  Created by taehy.k on 2020/12/11.
+//  Created by taehy.k on 2020/12/19.
 //  Copyright © 2020 송지훈. All rights reserved.
 //
 
 import UIKit
 
-class CategoryTableViewCell: UITableViewCell {
-    
+class QuestionTableViewCell: UITableViewCell {
+
     //MARK: - IBOutlet
-    @IBOutlet weak var categoryTitleLabel: UILabel!
-    @IBOutlet weak var categoryDetailMenuButton: UIButton!
+    @IBOutlet weak var questionContentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +22,12 @@ class CategoryTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    
+    func setData(content : String)
+    {
+        self.questionContentLabel.text = content
     }
     
 }

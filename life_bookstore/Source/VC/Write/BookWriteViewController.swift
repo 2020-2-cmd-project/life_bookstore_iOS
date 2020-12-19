@@ -16,6 +16,9 @@ import RealmSwift
 
 class BookWriteViewController: UIViewController {
     
+
+    
+    
     @IBOutlet weak var writeTitleLabel: UILabel!
     @IBOutlet weak var writeDirectiveLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -33,7 +36,6 @@ class BookWriteViewController: UIViewController {
     var bookItems : List<BookDataModelList>?
     let realm = try! Realm()
     
-    var bookData : [BookDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -102,8 +104,7 @@ class BookWriteViewController: UIViewController {
         book.time = dateTextField.text ?? ""
         book.location = locationTextField.text ?? ""
         book.color = "#fff"
-        book.categoryIndex = 0
-        book.questionIndex = 0
+
         
         try! self.realm.write {
             self.realm.add(book)
@@ -114,7 +115,16 @@ class BookWriteViewController: UIViewController {
     
     @IBAction func categoryButtonClicked(_ sender: Any) {
         
+        guard let categoryVC = self.storyboard?.instantiateViewController(identifier: "BookCategoryViewController") as? BookCategoryViewController else {return}
+        
+        categoryVC.modalPresentationStyle = .fullScreen
+        present(categoryVC, animated: true, completion: nil)
+        
+        
     }
+    
+    
+    
 }
 
 
