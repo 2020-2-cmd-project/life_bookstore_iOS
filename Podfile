@@ -11,7 +11,7 @@ target 'life_bookstore' do
   pod 'SwiftyJSON','~>4.0'
   pod 'TextFieldEffects'
   pod 'Kingfisher', '~> 5.0'
-
+  pod 'FlexColorPicker'
 
 
 end
