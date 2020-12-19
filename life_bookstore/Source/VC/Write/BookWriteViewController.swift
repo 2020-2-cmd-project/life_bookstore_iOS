@@ -43,7 +43,10 @@ class BookWriteViewController: UIViewController {
     var dateString = String()
 
     // Storing Data
-    var willStoreColor: String = ""
+    var willStoreColor: String?
+    var willStoreImage: Data?
+    var willStoreCategoryName: String?
+    var willStoreQuestionName: String?
     
 
     
@@ -55,11 +58,6 @@ class BookWriteViewController: UIViewController {
         defaultSetting()
         
         setDataPicker()
-        // textfield init
-        titleTextField.placeholder = "제목"
-        dateTextField.placeholder = "날짜"
-        locationTextField.placeholder = "위치"
-
         
         contentTextField.delegate = self
         imagePicker.delegate = self
@@ -78,12 +76,22 @@ class BookWriteViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(colorDataReceived), name: NSNotification.Name("clickedColorCell"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(categoryDataReceived), name: NSNotification.Name("clickedCategoryCell"), object: nil)
+        
     }
     
     @objc func questionDataReceived(notification : NSNotification)
     {
         let receivedString = notification.object as? String ?? ""
         self.questionLabel.text = receivedString
+        willStoreQuestionName = receivedString
+    }
+    
+    @objc func categoryDataReceived(notification : NSNotification)
+    {
+        let receivedCategoryData = notification.object as? String ?? ""
+//        self.questionLabel.text = receivedString
+        willStoreCategoryName = receivedCategoryData
     }
     
     @objc func colorDataReceived(notification : NSNotification)
@@ -205,7 +213,11 @@ class BookWriteViewController: UIViewController {
         book.content = contentTextField.text
         book.time = dateTextField.text ?? ""
         book.location = locationTextField.text ?? ""
-        book.color = willStoreColor
+        book.color = willStoreColor ?? "#707070"
+        book.bookCoverPhoto = willStoreImage ?? Data()
+        
+        book.questionName = willStoreQuestionName ?? String()
+        book.categoryName = willStoreCategoryName ?? String()
 
         
         try! self.realm.write {
@@ -271,15 +283,10 @@ class BookWriteViewController: UIViewController {
 // MARK: - textField delegate
 extension BookWriteViewController: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        print("textfield clicked")
-        
-//        present(datePicker, animated: true, completion: nil)
+//        print("textfield clicked")
         
         dateTextField.inputView = datePicker
 
-        dateTextField.placeholder = "2020.12.24"
-        titleTextField.placeholder = "제목을 입력해주세요"
-//        c
     }
     
     
@@ -303,6 +310,7 @@ extension BookWriteViewController: UINavigationControllerDelegate, UIImagePicker
         guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
         
         let imageData = image.pngData()
+        willStoreImage = imageData
         
         self.imageView.image = image
         

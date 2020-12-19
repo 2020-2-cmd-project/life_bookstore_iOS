@@ -28,11 +28,14 @@ class BookCategoryViewController: UIViewController {
     var categoryArray : [CategoryContainerDataModelList] = []
     var questionArray : [QuestionDataModel] = []
     var tableViewData : [cellData] = [
-        cellData(opened: false, categoryName: "여행", sectionData: ["가장 아름다웠던 나라는 무엇인가요?","가장 Flex 했던 나라는 어디인가요?"]),
-        cellData(opened: false, categoryName: "소확행", sectionData: ["오늘 가장 맛있게 먹은 음식은 무엇인가요?","소소한 행복 BEST 5"]),
-        cellData(opened: false, categoryName: "추억", sectionData: ["대학 생활 중 기억에 남는 추억은?","고등학교 생활 중 기억에 남는 추억은?"]),
-        cellData(opened: false, categoryName: "맛집", sectionData: ["혜화 맛집을 정리해볼까요?","가봤던 맛집 중 기억에 남는 가게는?"]),
+        
+    
+//        cellData(opened: false, categoryName: "여행", sectionData: ["가장 아름다웠던 나라는 무엇인가요?","가장 Flex 했던 나라는 어디인가요?"]),
+//        cellData(opened: false, categoryName: "소확행", sectionData: ["오늘 가장 맛있게 먹은 음식은 무엇인가요?","소소한 행복 BEST 5"]),
+//        cellData(opened: false, categoryName: "추억", sectionData: ["대학 생활 중 기억에 남는 추억은?","고등학교 생활 중 기억에 남는 추억은?"]),
+//        cellData(opened: false, categoryName: "맛집", sectionData: ["혜화 맛집을 정리해볼까요?","가봤던 맛집 중 기억에 남는 가게는?"]),
     ]
+    
     
     
     
@@ -71,6 +74,30 @@ class BookCategoryViewController: UIViewController {
         questionArray.removeAll()
         questionArray = questionRealmArray
         
+        for i in 0..<categoryArray.count {
+            
+            
+            var questionStringList : [String] = []
+            let object = realm.objects(QuestionDataModel.self).filter("categoryName == '\(categoryArray[i].categoryName)'")
+            
+            
+            let questionList = Array(object)
+            
+            
+            if questionList.count > 0
+            {
+                for i in 0 ... questionList.count - 1
+                {
+                    questionStringList.append(questionList[i].questionTitle)
+                }
+            }
+            
+            tableViewData.append(cellData(opened: false, categoryName: categoryArray[i].categoryName, sectionData: questionStringList))
+            
+        }
+        
+
+        
         tableView.reloadData()
     }
     
@@ -89,7 +116,7 @@ extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource
 
     // 섹션 수
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewData.count
+        return categoryArray.count
     }
     
     
@@ -174,8 +201,12 @@ extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource
             
         } else {
             
+            print(tableViewData[indexPath.section].categoryName)
             
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "clickedQuestionCell"), object: tableViewData[indexPath.section].sectionData[indexPath.row - 1])
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "clickedCategoryCell"), object: tableViewData[indexPath.section].categoryName)
+            
             
             dismiss(animated: true, completion: nil)
             
