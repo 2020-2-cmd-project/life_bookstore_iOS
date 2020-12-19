@@ -85,14 +85,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBP-cT-0VD">
-                                                    <rect key="frame" x="314" y="38" width="18" height="22"/>
-                                                    <state key="normal" image="plusButton"/>
+                                                    <rect key="frame" x="302" y="38" width="30" height="34"/>
                                                     <connections>
                                                         <action selector="addBookInCategory:" destination="Gm8-AM-eSl" eventType="touchUpInside" id="MLW-eq-Xrt"/>
                                                     </connections>
                                                 </button>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-dZ-nzh">
-                                                    <rect key="frame" x="0.0" y="85" width="374" height="382"/>
+                                                    <rect key="frame" x="0.0" y="97" width="374" height="370"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DQ2-Sg-uFi">
                                                         <size key="itemSize" width="292" height="95"/>
@@ -288,7 +287,6 @@
         <image name="mainLogo" width="96" height="51"/>
         <image name="mainSubtitle" width="375" height="23"/>
         <image name="mainbookShelf" width="297" height="13"/>
-        <image name="plusButton" width="18" height="18"/>
         <image name="searchButton" width="27" height="27"/>
         <image name="writeButton" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">
