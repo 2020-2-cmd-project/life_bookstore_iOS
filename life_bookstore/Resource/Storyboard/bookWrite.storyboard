@@ -88,6 +88,9 @@
                                         <state key="normal" title="표지 넣기">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="photoAddButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="Zsh-FG-dds"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문을 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50x-ds-fPM">
                                         <rect key="frame" x="24" y="133" width="142" height="21"/>
@@ -162,6 +165,9 @@
                                             <constraint firstAttribute="width" constant="50" id="W10-vf-Emv"/>
                                             <constraint firstAttribute="height" constant="30" id="Zub-eB-1hR"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="pickColorButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="fLp-gO-bE9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-wB-eU9">
                                         <rect key="frame" x="193" y="590" width="24" height="22.666666666666686"/>
@@ -338,6 +344,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jEV-k2-LWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086.9565217391305" y="121.875"/>
+        </scene>
+        <!--Book Color View Controller-->
+        <scene sceneID="z0Q-nB-eIQ">
+            <objects>
+                <viewController storyboardIdentifier="BookColorViewController" id="fMW-d8-eYU" customClass="BookColorViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fho-QG-qxD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR2-Gn-22C">
+                                <rect key="frame" x="353" y="68" width="41" height="24"/>
+                                <state key="normal" image="bookWriteButton"/>
+                                <connections>
+                                    <action selector="completeButtonClicked:" destination="fMW-d8-eYU" eventType="touchUpInside" id="30G-0Z-qBT"/>
+                                    <action selector="completeButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="o2a-l6-LkE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="87x-6h-P0T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="87x-6h-P0T" firstAttribute="trailing" secondItem="fR2-Gn-22C" secondAttribute="trailing" constant="20" id="geV-y7-zda"/>
+                            <constraint firstItem="fR2-Gn-22C" firstAttribute="top" secondItem="87x-6h-P0T" secondAttribute="top" constant="24" id="s7H-y3-S22"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyT-pN-9Ai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="122"/>
         </scene>
     </scenes>
     <resources>

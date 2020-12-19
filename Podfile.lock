@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.8.2)
+  - FlexColorPicker (1.4.2)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -13,6 +14,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
+  - FlexColorPicker
   - Kingfisher (~> 5.0)
   - RealmSwift
   - SwiftyJSON (~> 4.0)
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FlexColorPicker
     - Kingfisher
     - Realm
     - RealmSwift
@@ -29,12 +32,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FlexColorPicker: d7ed5cfd8ceb936f2930e4e30629f9448967a5f8
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
   RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: ffe7eb0f2600caf2eef93864a1032f764d1a3002
+PODFILE CHECKSUM: 3187654daf272515cb09ba3e747ffd779640988a
 
 COCOAPODS: 1.10.0

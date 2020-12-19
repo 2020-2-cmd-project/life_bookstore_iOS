@@ -15,6 +15,7 @@ struct cellData {
     var sectionData = [String]()
 }
 
+
 class BookCategoryViewController: UIViewController {
 
     //MARK: - IBOutlet Part
@@ -34,6 +35,7 @@ class BookCategoryViewController: UIViewController {
     ]
     
     
+    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,10 +43,10 @@ class BookCategoryViewController: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
         
         
         dataLoadFromRealm()
@@ -95,7 +97,7 @@ extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource
         if indexPath.row == 0 {
             return 44
         } else {
-            return 44
+            return 52
         }
     }
 
@@ -137,8 +139,8 @@ extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource
                 return UITableViewCell()
             }
 
-            print(tableViewData[indexPath.section].sectionData[indexPath.row - 1])
-            cell.backgroundColor = .init(red: 28/255, green: 76/255, blue: 82/255, alpha: 1)
+//            print(tableViewData[indexPath.section].sectionData[indexPath.row - 1])
+            cell.backgroundColor = .init(red: 90/255, green: 178/255, blue: 174/255, alpha: 1)
             cell.setData(content: tableViewData[indexPath.section].sectionData[indexPath.row - 1])
 
             return cell
@@ -153,20 +155,35 @@ extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource
 // MARK: - Table Expansion
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        if tableViewData[indexPath.section].opened == true {
+        if indexPath.row == 0 {
+          
+            
+            if tableViewData[indexPath.section].opened == true {
 
-            tableViewData[indexPath.section].opened = false
-            let sections = IndexSet.init(integer: indexPath.section)
-            tableView.reloadSections(sections, with: .none)
+                tableViewData[indexPath.section].opened = false
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none)
 
+            } else {
+
+                tableViewData[indexPath.section].opened = true
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none)
+            }
+            
+            
         } else {
-
-            tableViewData[indexPath.section].opened = true
-            let sections = IndexSet.init(integer: indexPath.section)
-            tableView.reloadSections(sections, with: .none)
+            
+            
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "clickedQuestionCell"), object: tableViewData[indexPath.section].sectionData[indexPath.row - 1])
+            
+            dismiss(animated: true, completion: nil)
+            
+            
         }
+
         
     }
     
 }
+

@@ -11,6 +11,7 @@
 		BD1FDDEF2583342F00C6E344 /* BookCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */; };
 		BD1FDDF32583394B00C6E344 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */; };
 		BDC707F6258DF16500BEB92E /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */; };
+		BDC70805258E29C400BEB92E /* BookColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC70804258E29C400BEB92E /* BookColorViewController.swift */; };
 		FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83132524E6C500F53D09 /* Arita-buriL.otf */; };
 		FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */; };
 		FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */; };
@@ -45,6 +46,7 @@
 		BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategoryViewController.swift; sourceTree = "<group>"; };
 		BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		BDC70804258E29C400BEB92E /* BookColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookColorViewController.swift; sourceTree = "<group>"; };
 		F4FB82D44AB334DED22790BB /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD2C83132524E6C500F53D09 /* Arita-buriL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriL.otf"; sourceTree = "<group>"; };
 		FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-1.otf"; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */,
 				BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */,
 				BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */,
+				BDC70804258E29C400BEB92E /* BookColorViewController.swift */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE8AE4624FE003400DC690D /* ViewController.swift in Sources */,
+				BDC70805258E29C400BEB92E /* BookColorViewController.swift in Sources */,
 				FDE8AE6624FE074100DC690D /* BookWriteViewController.swift in Sources */,
 				FDD4365B25257BE400F96D9E /* alertScreenExtension.swift in Sources */,
 				FDE8AE6B24FE076400DC690D /* BookDetailViewController.swift in Sources */,
