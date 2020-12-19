@@ -88,6 +88,9 @@
                                         <state key="normal" title="표지 넣기">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="photoAddButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="Zsh-FG-dds"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="질문을 선택해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50x-ds-fPM">
                                         <rect key="frame" x="24" y="133" width="142" height="21"/>
@@ -104,6 +107,9 @@
                                         <state key="normal" title="카테고리">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="categoryButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="2zL-es-mA7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -159,6 +165,9 @@
                                             <constraint firstAttribute="width" constant="50" id="W10-vf-Emv"/>
                                             <constraint firstAttribute="height" constant="30" id="Zub-eB-1hR"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="pickColorButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="fLp-gO-bE9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLq-wB-eU9">
                                         <rect key="frame" x="193" y="590" width="24" height="22.666666666666686"/>
@@ -226,11 +235,152 @@
             </objects>
             <point key="canvasLocation" x="265.21739130434787" y="121.875"/>
         </scene>
+        <!--Book Category View Controller-->
+        <scene sceneID="fZq-qw-qNv">
+            <objects>
+                <viewController storyboardIdentifier="BookCategoryViewController" modalPresentationStyle="pageSheet" id="uFk-ri-XeX" customClass="BookCategoryViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1dZ-u9-D7s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 고르기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8T-64-eLq">
+                                <rect key="frame" x="150" y="68" width="114" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tgg-u3-rGU">
+                                <rect key="frame" x="0.0" y="98" width="414" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="questionTableCell" rowHeight="128" id="Vk3-yk-7di" customClass="QuestionTableViewCell" customModule="life_bookstore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vk3-yk-7di" id="PVZ-qq-2xi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbW-YR-bGK">
+                                                    <rect key="frame" x="20" y="53.666666666666657" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="gbW-YR-bGK" secondAttribute="trailing" constant="20" id="CWs-WP-dFA"/>
+                                                <constraint firstItem="gbW-YR-bGK" firstAttribute="leading" secondItem="PVZ-qq-2xi" secondAttribute="leading" constant="20" id="Xz1-mo-B8x"/>
+                                                <constraint firstItem="gbW-YR-bGK" firstAttribute="centerY" secondItem="PVZ-qq-2xi" secondAttribute="centerY" id="jpw-Gi-kwX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.1084721461" green="0.2981131971" blue="0.32228374479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="questionContentLabel" destination="gbW-YR-bGK" id="uXV-fI-Geq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryTableCell" id="QqF-4E-GlR" customClass="CategoryTableViewCell" customModule="life_bookstore" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="156" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QqF-4E-GlR" id="1Ej-uw-q3p">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wE-Rc-T8Z">
+                                                    <rect key="frame" x="20" y="11.666666666666664" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lND-3K-zGc">
+                                                    <rect key="frame" x="378" y="6" width="16" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="8zF-D0-DTC"/>
+                                                        <constraint firstAttribute="height" constant="32" id="pZd-fm-S1e"/>
+                                                    </constraints>
+                                                    <state key="normal" image="categoryDetailMenuButton"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lND-3K-zGc" firstAttribute="centerY" secondItem="1Ej-uw-q3p" secondAttribute="centerY" id="YNS-99-QQO"/>
+                                                <constraint firstItem="7wE-Rc-T8Z" firstAttribute="leading" secondItem="1Ej-uw-q3p" secondAttribute="leading" constant="20" id="fYz-vA-NpP"/>
+                                                <constraint firstItem="7wE-Rc-T8Z" firstAttribute="centerY" secondItem="1Ej-uw-q3p" secondAttribute="centerY" id="ncc-sY-anY"/>
+                                                <constraint firstAttribute="trailing" secondItem="lND-3K-zGc" secondAttribute="trailing" constant="20" id="yUv-3Z-j0a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryDetailMenuButton" destination="lND-3K-zGc" id="5hc-ne-vVk"/>
+                                            <outlet property="categoryTitleLabel" destination="7wE-Rc-T8Z" id="9dD-47-fNm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3A-Dm-WjY">
+                                <rect key="frame" x="20" y="68" width="14" height="22"/>
+                                <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="closeButtonClicked:" destination="uFk-ri-XeX" eventType="touchUpInside" id="9EX-NM-cwj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s0C-fJ-CKJ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Tgg-u3-rGU" secondAttribute="bottom" id="E4Q-JS-R9h"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="trailing" secondItem="s0C-fJ-CKJ" secondAttribute="trailing" id="HQi-0o-ZDa"/>
+                            <constraint firstItem="d8T-64-eLq" firstAttribute="top" secondItem="s0C-fJ-CKJ" secondAttribute="top" constant="24" id="dJt-Qd-V00"/>
+                            <constraint firstItem="L3A-Dm-WjY" firstAttribute="leading" secondItem="s0C-fJ-CKJ" secondAttribute="leading" constant="20" id="fge-qo-D7S"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="leading" secondItem="s0C-fJ-CKJ" secondAttribute="leading" id="hKW-HJ-BPS"/>
+                            <constraint firstItem="Tgg-u3-rGU" firstAttribute="top" secondItem="d8T-64-eLq" secondAttribute="bottom" constant="8" symbolic="YES" id="i7D-vU-Xzb"/>
+                            <constraint firstItem="d8T-64-eLq" firstAttribute="centerX" secondItem="1dZ-u9-D7s" secondAttribute="centerX" id="jzz-Zj-2GJ"/>
+                            <constraint firstItem="L3A-Dm-WjY" firstAttribute="centerY" secondItem="d8T-64-eLq" secondAttribute="centerY" id="qf9-A4-b5z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VLx-xR-eOt"/>
+                    <connections>
+                        <outlet property="closeButton" destination="L3A-Dm-WjY" id="PB1-Cu-hKV"/>
+                        <outlet property="tableView" destination="Tgg-u3-rGU" id="eOd-7G-xUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jEV-k2-LWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1086.9565217391305" y="121.875"/>
+        </scene>
+        <!--Book Color View Controller-->
+        <scene sceneID="z0Q-nB-eIQ">
+            <objects>
+                <viewController storyboardIdentifier="BookColorViewController" id="fMW-d8-eYU" customClass="BookColorViewController" customModule="life_bookstore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fho-QG-qxD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fR2-Gn-22C">
+                                <rect key="frame" x="353" y="68" width="41" height="24"/>
+                                <state key="normal" image="bookWriteButton"/>
+                                <connections>
+                                    <action selector="completeButtonClicked:" destination="fMW-d8-eYU" eventType="touchUpInside" id="30G-0Z-qBT"/>
+                                    <action selector="completeButtonClicked:" destination="B0W-vP-XzG" eventType="touchUpInside" id="o2a-l6-LkE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="87x-6h-P0T"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="87x-6h-P0T" firstAttribute="trailing" secondItem="fR2-Gn-22C" secondAttribute="trailing" constant="20" id="geV-y7-zda"/>
+                            <constraint firstItem="fR2-Gn-22C" firstAttribute="top" secondItem="87x-6h-P0T" secondAttribute="top" constant="24" id="s7H-y3-S22"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DyT-pN-9Ai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="122"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bookBackground" width="377" height="690"/>
         <image name="bookWriteButton" width="41" height="24"/>
+        <image name="categoryDetailMenuButton" width="15" height="3"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="closeButton" width="14" height="14"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
