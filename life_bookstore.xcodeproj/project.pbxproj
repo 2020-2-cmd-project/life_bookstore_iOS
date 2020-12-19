@@ -19,6 +19,7 @@
 		FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83182524E6C500F53D09 /* Arita-buriM.otf */; };
 		FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */; };
 		FD411A9D258DF20200FEFF3A /* BookSearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD411A9C258DF20200FEFF3A /* BookSearchCollectionCell.swift */; };
+		FD411AB4258E4CF000FEFF3A /* hexToRgb + UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD411AB3258E4CF000FEFF3A /* hexToRgb + UIColor.swift */; };
 		FD7F36462525EC09008ADA28 /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */; };
 		FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB966E925669FDE00DED224 /* DataModel + Realm.swift */; };
 		FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FDD436502524E7D000F96D9E /* Arita-buriSB.otf */; };
@@ -56,6 +57,7 @@
 		FD2C83182524E6C500F53D09 /* Arita-buriM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriM.otf"; sourceTree = "<group>"; };
 		FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-2.otf"; sourceTree = "<group>"; };
 		FD411A9C258DF20200FEFF3A /* BookSearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchCollectionCell.swift; sourceTree = "<group>"; };
+		FD411AB3258E4CF000FEFF3A /* hexToRgb + UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "hexToRgb + UIColor.swift"; sourceTree = "<group>"; };
 		FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arita-buriSB.otf"; path = "life_bookstore/fonts/Arita-buriSB.otf"; sourceTree = "<group>"; };
 		FDB966E925669FDE00DED224 /* DataModel + Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel + Realm.swift"; sourceTree = "<group>"; };
 		FDD4364F2524E7D000F96D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Arita-buriSB.otf"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */,
+				FD411AB3258E4CF000FEFF3A /* hexToRgb + UIColor.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */,
 				FDE8AE4424FE003400DC690D /* SceneDelegate.swift in Sources */,
 				FDD436702525A1D700F96D9E /* ShelfContainerCollectionCell.swift in Sources */,
+				FD411AB4258E4CF000FEFF3A /* hexToRgb + UIColor.swift in Sources */,
 				FDD4366D2525A15000F96D9E /* CategoryContainerCollectionCell.swift in Sources */,
 				FD411A9D258DF20200FEFF3A /* BookSearchCollectionCell.swift in Sources */,
 				BD1FDDF32583394B00C6E344 /* CategoryTableViewCell.swift in Sources */,
