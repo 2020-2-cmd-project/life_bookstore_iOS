@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     var shelfArray : [ShelfDataModelList] = []
     var bookArray : [BookDataModelList] = []
     
+    var bookListInCategory : [[BookDataModelList]] = []
+    
     
 //    var categoryContainerData : [CategoryContainerDataModel] = []
 //    var shelfData : [ShelfDataModel] = []
@@ -50,6 +52,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         naviSetting()
+    
         
         self.libraryCollectionView.delegate = self
         self.libraryCollectionView.dataSource = self
@@ -62,21 +65,65 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         dataLoadFromRealm()
+//        writeBooks()
     }
     
-    
+    func writeBooks()
+    {
+        let book = BookDataModelList()
+        book.title = "크리스마스의 추억"
+        book.content = "할로"
+        book.categoryName = "소확행"
+        book.questionName = "인생에 있어서 행복한 기억"
+        book.time = "20.12.25"
+        try! self.realm.write {
+            self.realm.add(book)
+            
+          }
+        
+        
+    }
     
     func dataLoadFromRealm()
     {
         let list = realm.objects(CategoryContainerDataModelList.self)
         
         let categoryRealmArray = Array(list)
-        
-        
+
         categoryArray.removeAll()
         categoryArray = categoryRealmArray
         
         libraryCollectionView.reloadData()
+        
+        
+        let booklist = realm.objects(BookDataModelList.self)
+        let bookRealmArray = Array(booklist)
+        
+        bookArray.removeAll()
+        bookArray = bookRealmArray
+        
+        
+
+        if categoryArray.count > 0
+        {
+            for i in 0 ... categoryArray.count - 1
+            {
+                let bookRealmData = realm
+                    .objects(BookDataModelList.self)
+                    .filter("categoryName == '\(categoryArray[i].categoryName)'")
+                
+
+
+                bookListInCategory.append(Array(bookRealmData))
+                
+                
+            }
+        }
+        
+
+        
+ 
+        
     }
     
 
@@ -86,6 +133,23 @@ class ViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
 
+    
+    @IBAction func searchButtonClicked(_ sender: Any) {
+        
+        let searchStoryboard = UIStoryboard(name: "bookSearch", bundle: nil)
+        
+        guard let searchVC =  searchStoryboard.instantiateViewController(identifier: "BookSearchViewController") as? BookSearchViewController else {return}
+        
+        self.navigationController?.pushViewController(searchVC, animated: true)
+        
+    
+        
+    
+    }
+    
+    
+    
+    
 
 }
 
@@ -117,8 +181,10 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
                 category.shelves = List<ShelfDataModelList>()
                 category.shelves.append(ShelfDataModelList()) // 최소한 1개의 shelves 는 필요하다 
                 
+                
                 try! self.realm.write {
                     self.realm.add(category)
+                    
                   }
                 
                 
@@ -144,6 +210,24 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
             
             
         }
+        
+        else // 일반 셀을 클릭한 경우 뷰로 넘어가야 합니다
+        {
+            
+            let searchStoryboard = UIStoryboard(name: "bookSearch", bundle: nil)
+            
+            guard let searchVC =  searchStoryboard.instantiateViewController(identifier: "BookSearchViewController") as? BookSearchViewController else {return}
+            
+            searchVC.bookData = bookListInCategory[indexPath.row]
+            searchVC.categoryName = categoryArray[indexPath.row].categoryName
+            
+            self.navigationController?.pushViewController(searchVC, animated: true)
+            
+        
+            
+            
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -159,9 +243,12 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
             guard let categoryContainerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryContainerCollectionCell", for: indexPath) as? CategoryContainerCollectionCell else { return UICollectionViewCell() }
             
             let shelvesData = Array(categoryArray[indexPath.row].shelves)
-            categoryContainerCell.setName(name: categoryArray[indexPath.row].categoryName, shelves: shelvesData)
+
+            categoryContainerCell.setName(name: categoryArray[indexPath.row].categoryName, shelves: shelvesData,books: bookListInCategory[indexPath.row])
             
 
+
+            
             
             return categoryContainerCell
         }

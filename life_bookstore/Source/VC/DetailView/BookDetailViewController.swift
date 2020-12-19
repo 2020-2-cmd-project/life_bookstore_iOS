@@ -34,6 +34,7 @@ class BookDetailViewController: UIViewController {
     
     var hashTagStringList = ""
     
+    
 
     //MARK:- Constraint Part
     
@@ -41,7 +42,7 @@ class BookDetailViewController: UIViewController {
     //MARK:- Life Cycle Part
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("북 데이터",bookData)
     }
     
     //MARK:- IBAction Part
