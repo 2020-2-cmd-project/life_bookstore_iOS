@@ -40,6 +40,8 @@ class BookWriteViewController: UIViewController {
         fontSetting()
         buttonSetting()
         defaultSetting()
+        
+        contentTextField.delegate = self
     }
     
     
@@ -112,5 +114,15 @@ class BookWriteViewController: UIViewController {
     
     @IBAction func categoryButtonClicked(_ sender: Any) {
         
+    }
+}
+
+
+// MARK: - textField delegate
+extension BookWriteViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+//        print("text view clicked")
+        contentTextField.text = ""
     }
 }

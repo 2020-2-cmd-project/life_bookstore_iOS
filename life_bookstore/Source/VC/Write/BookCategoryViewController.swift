@@ -9,6 +9,12 @@
 import UIKit
 import RealmSwift
 
+struct cellData {
+    var opened = Bool()
+    var categoryName = String()
+    var sectionData = [String]()
+}
+
 class BookCategoryViewController: UIViewController {
 
     //MARK: - IBOutlet Part
@@ -18,7 +24,8 @@ class BookCategoryViewController: UIViewController {
     //MARK: - Variable Part
     let realm = try! Realm()
     var categoryArray : [CategoryContainerDataModelList] = []
-
+    var tableViewData : [cellData] = []
+    
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
@@ -35,6 +42,8 @@ class BookCategoryViewController: UIViewController {
         
         dataLoadFromRealm()
     }
+    
+    
     
     //MARK: - Default Setting
     func dataLoadFromRealm()
@@ -53,20 +62,35 @@ class BookCategoryViewController: UIViewController {
 
 }
 
+
+//MARK: - TableView Extension
 extension BookCategoryViewController: UITableViewDelegate, UITableViewDataSource {
+
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categoryArray.count
+        return tableViewData.count
     }
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableCell", for: indexPath) as? CategoryTableViewCell else {
             return UITableViewCell()
         }
         
+        tableViewData.append(cellData(opened: false, categoryName: categoryArray[indexPath.row].categoryName, sectionData: ["질문 1", "질문 2", "질문 3"]))
+        
         cell.categoryTitleLabel.text = categoryArray[indexPath.row].categoryName
         
         return cell
     }
     
+    
+// MARK: - Table Expansion
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(categoryArray[indexPath.row].categoryName)
+        
+        
+    }
     
 }
