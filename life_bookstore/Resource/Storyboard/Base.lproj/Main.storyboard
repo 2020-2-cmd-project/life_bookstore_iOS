@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kE8-1Z-HV1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kE8-1Z-HV1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -29,11 +29,6 @@
                                             <segue destination="uPo-yW-fE9" kind="push" id="bpQ-gb-mLh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-bv-dc7">
-                                        <rect key="frame" x="16" y="71" width="20" height="22"/>
-                                        <color key="tintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="arrangeMenu"/>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="abk-KU-Bbq">
                                         <rect key="frame" x="139.5" y="55" width="96" height="51"/>
                                     </imageView>
@@ -45,7 +40,7 @@
                                         <color key="tintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="searchButton"/>
                                         <connections>
-                                            <segue destination="o7a-mK-4q6" kind="push" id="DiZ-Ut-F47"/>
+                                            <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ek3-xe-fZ8"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -57,15 +52,13 @@
                                     <constraint firstAttribute="bottom" secondItem="vjK-aB-XRw" secondAttribute="bottom" constant="8" id="J7c-eO-DEP"/>
                                     <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="abk-KU-Bbq" secondAttribute="bottom" constant="10" id="Nts-lx-jZk"/>
                                     <constraint firstAttribute="trailing" secondItem="SK0-6S-s7E" secondAttribute="trailing" constant="16" id="Tc4-Rp-x36"/>
-                                    <constraint firstItem="UdF-bv-dc7" firstAttribute="leading" secondItem="PKH-95-a2M" secondAttribute="leading" constant="16" id="X8S-kU-MvO"/>
                                     <constraint firstAttribute="height" constant="147" id="Y2M-sF-HLt"/>
                                     <constraint firstItem="abk-KU-Bbq" firstAttribute="centerX" secondItem="PKH-95-a2M" secondAttribute="centerX" id="ZaZ-Dx-T7f"/>
                                     <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="SK0-6S-s7E" secondAttribute="bottom" constant="23" id="god-ee-CMa"/>
-                                    <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="UdF-bv-dc7" secondAttribute="bottom" constant="23" id="kLs-H5-tkN"/>
                                     <constraint firstAttribute="trailing" secondItem="vjK-aB-XRw" secondAttribute="trailing" id="yvC-d5-q39"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eth-hK-O96">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eth-hK-O96">
                                 <rect key="frame" x="0.0" y="143" width="375" height="1323"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aVy-dn-cVK">
@@ -92,14 +85,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBP-cT-0VD">
-                                                    <rect key="frame" x="314" y="38" width="18" height="22"/>
-                                                    <state key="normal" image="plusButton"/>
+                                                    <rect key="frame" x="302" y="38" width="30" height="34"/>
                                                     <connections>
                                                         <action selector="addBookInCategory:" destination="Gm8-AM-eSl" eventType="touchUpInside" id="MLW-eq-Xrt"/>
                                                     </connections>
                                                 </button>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-dZ-nzh">
-                                                    <rect key="frame" x="0.0" y="85" width="374" height="382"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="f7A-dZ-nzh">
+                                                    <rect key="frame" x="0.0" y="97" width="374" height="370"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DQ2-Sg-uFi">
                                                         <size key="itemSize" width="292" height="95"/>
@@ -291,12 +283,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrangeMenu" width="20" height="15"/>
         <image name="categoryAddButton" width="161" height="29"/>
         <image name="mainLogo" width="96" height="51"/>
         <image name="mainSubtitle" width="375" height="23"/>
         <image name="mainbookShelf" width="297" height="13"/>
-        <image name="plusButton" width="18" height="18"/>
         <image name="searchButton" width="27" height="27"/>
         <image name="writeButton" width="22" height="22"/>
         <systemColor name="systemBackgroundColor">

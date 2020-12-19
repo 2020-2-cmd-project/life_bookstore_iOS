@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CategoryContainerCollectionCell: UICollectionViewCell {
     @IBOutlet weak var categoryContainerCollectionView: UICollectionView! // 한개 카테고리내에 있는 선반들을 담는 컬렉션 뷰
     
     @IBOutlet weak var categoryName: UILabel!
-    
+    let realm = try! Realm()
+
+
     var shelfData : [ShelfDataModelList] = []
+    var bookData : [BookDataModelList] = []
     
-    func setName(name : String, shelves : [ShelfDataModelList])
+    func setName(name : String, shelves : [ShelfDataModelList], books : [BookDataModelList])
     {
         self.categoryName.text = name
         
@@ -23,7 +27,11 @@ class CategoryContainerCollectionCell: UICollectionViewCell {
         
         
         self.shelfData = shelves
+        self.bookData = books
         
+        
+        categoryContainerCollectionView.reloadData()
+
  
     }
     
@@ -44,15 +52,13 @@ extension CategoryContainerCollectionCell : UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
- 
-        
+
         guard let shelfContainerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "ShelfContainerCollectionCell", for: indexPath) as? ShelfContainerCollectionCell else { return UICollectionViewCell() }
         
         let bookData = Array(shelfData[indexPath.row].books)
-        shelfContainerCell.settingBook(book: bookData)
+        shelfContainerCell.settingBook(book: self.bookData)
 
 
-        
         return shelfContainerCell
 
     }

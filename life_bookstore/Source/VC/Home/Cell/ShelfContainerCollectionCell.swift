@@ -20,9 +20,13 @@ class ShelfContainerCollectionCell: UICollectionViewCell {
     {
         self.bookData = book
         
+        print("북 데이터",bookData.count)
+        
         let width = UIScreen.main.bounds.size.width
 
         self.shelfWidthConstraint.constant = width - 78
+        
+        self.bookConainerCollectionView.reloadData()
     }
 }
 
