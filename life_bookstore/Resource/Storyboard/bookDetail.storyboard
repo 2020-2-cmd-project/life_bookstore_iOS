@@ -139,7 +139,7 @@
                                                     <constraint firstItem="e4C-Oh-wzc" firstAttribute="leading" secondItem="qdo-xH-jL1" secondAttribute="leading" constant="30" id="yEN-pk-Fhr"/>
                                                 </constraints>
                                             </view>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5u-t9-S1B">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o5u-t9-S1B">
                                                 <rect key="frame" x="125" y="171" width="164" height="205"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="o5u-t9-S1B" secondAttribute="height" multiplier="4:5" id="qT5-LY-hkD"/>

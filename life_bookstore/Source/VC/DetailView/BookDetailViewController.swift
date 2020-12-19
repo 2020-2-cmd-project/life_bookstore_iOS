@@ -43,7 +43,7 @@ class BookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fontSetting()
-        print("북 데이터",bookData)
+//        self.view.backgroundColor = UIColor(hexString: bookData.color)
       
     }
     override func viewWillAppear(_ animated: Bool) {

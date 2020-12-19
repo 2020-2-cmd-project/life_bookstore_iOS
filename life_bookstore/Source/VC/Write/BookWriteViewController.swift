@@ -58,6 +58,7 @@ class BookWriteViewController: UIViewController {
         defaultSetting()
         
         setDataPicker()
+        setTextView()
         
         contentTextField.delegate = self
         imagePicker.delegate = self
@@ -102,6 +103,26 @@ class BookWriteViewController: UIViewController {
         colorPickButton.backgroundColor = UIColor(hexString: receivedColorData)
     }
     
+    
+    func setTextView()
+    {
+        let toolBarKeyboard = UIToolbar()
+                toolBarKeyboard.sizeToFit()
+                let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+                let btnDoneBar = UIBarButtonItem(title: "닫기", style: .done, target: self, action: #selector(self.doneBtnClicked))
+                toolBarKeyboard.items = [flexSpace,btnDoneBar]
+        
+        
+        
+        contentTextField.inputAccessoryView = toolBarKeyboard
+        locationTextField.inputAccessoryView = toolBarKeyboard
+        titleTextField.inputAccessoryView = toolBarKeyboard
+ 
+    }
+    @IBAction func doneBtnClicked()
+    {
+        self.view.endEditing(true)
+    }
     
     func fontSetting() {
         self.writeTitleLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 18)
@@ -184,9 +205,8 @@ class BookWriteViewController: UIViewController {
             formatter1.timeZone = TimeZone.current
 
             
-            formatter.dateFormat = "yyyy년 MM월 dd일"
-            formatter1.dateFormat = "yyyy-MM-dd"
-            
+            formatter.dateFormat = "YY.MM.dd"
+
             self.dateString = formatter1.string(from: datePicker.date)
             dateTextField.text = formatter.string(from: datePicker.date)
             self.view.endEditing(true)
@@ -222,8 +242,10 @@ class BookWriteViewController: UIViewController {
         
         try! self.realm.write {
             self.realm.add(book)
+            NotificationCenter.default.post(name: NSNotification.Name("reloadBookData"), object: nil)
         }
         
+
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -309,7 +331,7 @@ extension BookWriteViewController: UINavigationControllerDelegate, UIImagePicker
             
         guard let image = (info[UIImagePickerController.InfoKey.originalImage] as? UIImage) else { return }
         
-        let imageData = image.pngData()
+        let imageData = image.jpegData(compressionQuality: 0.6)
         willStoreImage = imageData
         
         self.imageView.image = image

@@ -20,7 +20,6 @@ class ShelfContainerCollectionCell: UICollectionViewCell {
     {
         self.bookData = book
         
-        print("북 데이터",bookData.count)
         
         let width = UIScreen.main.bounds.size.width
 
@@ -41,6 +40,8 @@ extension ShelfContainerCollectionCell : UICollectionViewDelegate,UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let bookContainerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookContainerCollectionCell", for: indexPath) as? BookContainerCollectionCell else { return UICollectionViewCell() }
+        bookContainerCell.setColor(color: UIColor.init(hexString: bookData[indexPath.row].color))
+
         
         return bookContainerCell
     }

@@ -16,6 +16,12 @@ class BookContainerCollectionCell: UICollectionViewCell {
     // 60 ~ 80 사이에서 놀아야 한다
     
     
+    func setColor(color : UIColor)
+    {
+        self.bookView.backgroundColor = color
+        self.bookViewHeightConstraint.constant = CGFloat(Int.random(in: 60 ... 80))
+    }
+    
     
     
     

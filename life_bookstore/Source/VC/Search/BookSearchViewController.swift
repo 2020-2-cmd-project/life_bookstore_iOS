@@ -207,6 +207,7 @@ extension BookSearchViewController : UICollectionViewDelegate
         
         detailVC.bookData = bookData[indexPath.row]
         
+        
         self.navigationController?.pushViewController(detailVC, animated: true)
         
         
@@ -236,6 +237,7 @@ extension BookSearchViewController: UICollectionViewDataSource
         
         
         bookCell.setData(title: bookData[indexPath.row].title, date: bookData[indexPath.row].time, coverImageData: bookData[indexPath.row].bookCoverPhoto, color: bookData[indexPath.row].color)
+        
         
         return bookCell
     }
