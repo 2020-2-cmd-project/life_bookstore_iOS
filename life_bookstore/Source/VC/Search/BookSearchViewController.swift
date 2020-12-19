@@ -19,12 +19,21 @@ class BookSearchViewController: UIViewController {
     
     @IBOutlet weak var bookCollectionView: UICollectionView!
     
-
+    @IBOutlet weak var searchBackgroundImageView: UIImageView!
+    
+    @IBOutlet weak var searchIconImageView: UIImageView!
+    @IBOutlet weak var deleteImageView: UIImageView!
+    @IBOutlet weak var deleteButton: UIButton!
+    
+    
+    
     let realm = try! Realm()
     
     var categoryName = ""
     var isViewMode = false
     var bookData : [BookDataModelList] = []
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +46,7 @@ class BookSearchViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         viewDataSetting()
+        NotificationCenter.default.addObserver(self, selector: #selector(setDeletedBookList), name: NSNotification.Name("reloadBookData"), object: nil)
     }
     
     
@@ -46,10 +56,20 @@ class BookSearchViewController: UIViewController {
         
         if isViewMode == true // 책 보기 모드 
         {
+            deleteImageView.isHidden = false
+            deleteButton.isHidden = false
+            searchIconImageView.isHidden = true
+            searchBackgroundImageView.isHidden = true
+            searchFieldTextLabel.isHidden = true
             searchTitleLabel.text = categoryName
         }
-        else
+        else // 검색 모드
         {
+            deleteImageView.isHidden = true
+            deleteButton.isHidden = true
+            searchIconImageView.isHidden = false
+            searchBackgroundImageView.isHidden = false
+            searchFieldTextLabel.isHidden = false
             self.searchTitleLabel.text = "책 찾아보기"
         }
     }
@@ -58,8 +78,16 @@ class BookSearchViewController: UIViewController {
     {
         self.bookCollectionView.delegate = self
         self.bookCollectionView.dataSource = self
+    }
+    
+    @objc func setDeletedBookList(noti : NSNotification) // 책이 삭제됐을때 호출되는 메소드, 해당 값에 대해서 삭제가 들어가야 함
+    {
+        let bookList = realm.objects(BookDataModelList.self).filter("categoryName == '\(categoryName)'")
         
+        self.bookData = Array(bookList)
         
+  
+        self.bookCollectionView.reloadData()
     }
 
     
@@ -69,8 +97,6 @@ class BookSearchViewController: UIViewController {
         
         self.searchFieldTextLabel.font = UIFont(name: "BareunBatangOTFPro-1", size: 15)
         
-        
-        
     }
 
     @IBAction func backButtonClicked(_ sender: Any) {
@@ -78,8 +104,46 @@ class BookSearchViewController: UIViewController {
 
     }
 
+    @IBAction func deleteCategoryButtonClicked(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "알림", message: "해당 카테고리를 삭제하시겠습니까?", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "확인", style: .default) { (_) in
+            
+            // 제목에 해당하는 데이터 삭제
+            let categoryObject = self.realm.objects(CategoryContainerDataModelList.self).filter("categoryName == '\(self.categoryName)'")
+            
+            try! self.realm.write {
+                self.realm.delete(categoryObject)
+                NotificationCenter.default.post(name: NSNotification.Name("reloadBookData"), object: nil)
+             
+            }
+  
+            
+            let detailAlert = UIAlertController(title: "알림", message: "삭제가 완료되었습니다", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default) { (_) in
+                self.navigationController?.popViewController(animated: true)
 
-}
+            }
+            
+            detailAlert.addAction(okAction)
+            self.present(detailAlert, animated: true, completion: nil)
+            
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+        
+    }
+        
+        
+    }
+    
+
 
 
 extension BookSearchViewController :UITextFieldDelegate
@@ -98,9 +162,30 @@ extension BookSearchViewController :UITextFieldDelegate
             // 검색이 들어가야 한다
             let bookRealmData = realm
                 .objects(BookDataModelList.self)
-                .filter("name contains '\(searchFieldTextLabel.text)'")
+                .filter("title contains '\(searchFieldTextLabel.text!)'")
             
+            
+            print("검색버튼 눌림",bookRealmData.count)
+            
+            
+            
+            if bookRealmData.count == 0
+            {
+                makeAlert(title: "알림", message: "검색 된 도서가 없습니다", vc: self)
+                self.bookData.removeAll()
+                self.bookCollectionView.reloadData()
+            }
+            else
+            {
+                self.bookData = Array(bookRealmData)
+                self.bookCollectionView.reloadData()
+            }
 
+
+        }
+        else
+        {
+            makeAlert(title: "알림", message: "검색어를 입력 해주세요", vc: self)
         }
         
         
@@ -148,6 +233,7 @@ extension BookSearchViewController: UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let bookCell = collectionView.dequeueReusableCell(withReuseIdentifier: "BookSearchCollectionCell", for: indexPath) as? BookSearchCollectionCell else {return UICollectionViewCell() }
+        
         
         bookCell.setData(title: bookData[indexPath.row].title, date: bookData[indexPath.row].time, coverImageData: bookData[indexPath.row].bookCoverPhoto, color: bookData[indexPath.row].color)
         

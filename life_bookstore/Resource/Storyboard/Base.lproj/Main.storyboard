@@ -29,11 +29,6 @@
                                             <segue destination="uPo-yW-fE9" kind="push" id="bpQ-gb-mLh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdF-bv-dc7">
-                                        <rect key="frame" x="16" y="71" width="20" height="22"/>
-                                        <color key="tintColor" red="0.21176470589999999" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" image="arrangeMenu"/>
-                                    </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainLogo" translatesAutoresizingMaskIntoConstraints="NO" id="abk-KU-Bbq">
                                         <rect key="frame" x="139.5" y="55" width="96" height="51"/>
                                     </imageView>
@@ -57,11 +52,9 @@
                                     <constraint firstAttribute="bottom" secondItem="vjK-aB-XRw" secondAttribute="bottom" constant="8" id="J7c-eO-DEP"/>
                                     <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="abk-KU-Bbq" secondAttribute="bottom" constant="10" id="Nts-lx-jZk"/>
                                     <constraint firstAttribute="trailing" secondItem="SK0-6S-s7E" secondAttribute="trailing" constant="16" id="Tc4-Rp-x36"/>
-                                    <constraint firstItem="UdF-bv-dc7" firstAttribute="leading" secondItem="PKH-95-a2M" secondAttribute="leading" constant="16" id="X8S-kU-MvO"/>
                                     <constraint firstAttribute="height" constant="147" id="Y2M-sF-HLt"/>
                                     <constraint firstItem="abk-KU-Bbq" firstAttribute="centerX" secondItem="PKH-95-a2M" secondAttribute="centerX" id="ZaZ-Dx-T7f"/>
                                     <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="SK0-6S-s7E" secondAttribute="bottom" constant="23" id="god-ee-CMa"/>
-                                    <constraint firstItem="vjK-aB-XRw" firstAttribute="top" secondItem="UdF-bv-dc7" secondAttribute="bottom" constant="23" id="kLs-H5-tkN"/>
                                     <constraint firstAttribute="trailing" secondItem="vjK-aB-XRw" secondAttribute="trailing" id="yvC-d5-q39"/>
                                 </constraints>
                             </view>
@@ -291,7 +284,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrangeMenu" width="20" height="15"/>
         <image name="categoryAddButton" width="161" height="29"/>
         <image name="mainLogo" width="96" height="51"/>
         <image name="mainSubtitle" width="375" height="23"/>

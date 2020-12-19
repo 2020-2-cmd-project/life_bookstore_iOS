@@ -39,13 +39,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zsd-Ph-cuy">
+                                        <rect key="frame" x="369" y="54" width="25" height="25.5"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="36z-u1-TBO"/>
+                                            <constraint firstAttribute="width" constant="25" id="tbg-GY-dCQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMC-lj-6pk">
+                                        <rect key="frame" x="364" y="38" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="PIx-eX-QAL"/>
+                                            <constraint firstAttribute="width" constant="50" id="hfT-Wq-yjP"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="deleteCategoryButtonClicked:" destination="4gS-HM-rhm" eventType="touchUpInside" id="wv1-kM-51i"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="IXM-tA-72K" firstAttribute="centerX" secondItem="3KM-Am-GUr" secondAttribute="centerX" id="90r-BW-7zx"/>
                                     <constraint firstAttribute="height" constant="88" id="IZG-9f-2OR"/>
                                     <constraint firstAttribute="bottom" secondItem="IXM-tA-72K" secondAttribute="bottom" constant="10" id="Ib3-h9-984"/>
+                                    <constraint firstAttribute="trailing" secondItem="zsd-Ph-cuy" secondAttribute="trailing" constant="20" id="Kqp-ib-aHD"/>
                                     <constraint firstItem="xEO-Je-yHZ" firstAttribute="leading" secondItem="3KM-Am-GUr" secondAttribute="leading" constant="22" id="XZ7-qm-SSd"/>
+                                    <constraint firstAttribute="bottom" secondItem="vMC-lj-6pk" secondAttribute="bottom" id="b28-xB-443"/>
+                                    <constraint firstItem="zsd-Ph-cuy" firstAttribute="centerY" secondItem="IXM-tA-72K" secondAttribute="centerY" id="cWW-Ko-SLw"/>
+                                    <constraint firstAttribute="trailing" secondItem="vMC-lj-6pk" secondAttribute="trailing" id="kUd-Ka-lSz"/>
                                     <constraint firstAttribute="bottom" secondItem="xEO-Je-yHZ" secondAttribute="bottom" constant="10" id="q49-e5-JAZ"/>
                                 </constraints>
                             </view>
@@ -162,7 +184,11 @@
                     </view>
                     <connections>
                         <outlet property="bookCollectionView" destination="H1W-3w-Fr8" id="cHb-yt-Cyx"/>
+                        <outlet property="deleteButton" destination="vMC-lj-6pk" id="sYZ-HB-4g5"/>
+                        <outlet property="deleteImageView" destination="zsd-Ph-cuy" id="NnX-ot-Pvc"/>
+                        <outlet property="searchBackgroundImageView" destination="WQ9-ip-uyh" id="fc2-AK-iTF"/>
                         <outlet property="searchFieldTextLabel" destination="ogB-vA-Ysj" id="0xB-Zp-eLI"/>
+                        <outlet property="searchIconImageView" destination="7kl-oB-StK" id="jeL-Mq-3MK"/>
                         <outlet property="searchTitleLabel" destination="IXM-tA-72K" id="uZi-AH-sJY"/>
                     </connections>
                 </viewController>
@@ -176,6 +202,10 @@
         <image name="searchField" width="311" height="36"/>
         <image name="searchGlyph" width="24" height="22"/>
         <image name="searchResultView" width="328" height="673"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

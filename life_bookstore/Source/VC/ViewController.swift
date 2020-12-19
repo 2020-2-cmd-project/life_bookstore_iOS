@@ -63,19 +63,30 @@ class ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name("reloadBookData"), object: nil)
+
         dataLoadFromRealm()
-//        writeBooks()
+//     writeBooks()
+
+
+    }
+    
+    @objc func reloadData()
+    {
+        print("다시 다ㅣㅣㅏ")
+        bookListInCategory.removeAll()
+        dataLoadFromRealm()
     }
     
     func writeBooks()
     {
         let book = BookDataModelList()
-        book.title = "크리스마스의 추억"
+        book.title = "헤헤의 추억"
         book.content = "할로"
         book.categoryName = "소확행"
         book.questionName = "인생에 있어서 행복한 기억"
         book.time = "20.12.25"
+        book.location = "혜화동"
         try! self.realm.write {
             self.realm.add(book)
             
@@ -103,7 +114,7 @@ class ViewController: UIViewController {
         bookArray = bookRealmArray
         
         
-
+        
         if categoryArray.count > 0
         {
             for i in 0 ... categoryArray.count - 1
@@ -113,13 +124,15 @@ class ViewController: UIViewController {
                     .filter("categoryName == '\(categoryArray[i].categoryName)'")
                 
 
-
+                
                 bookListInCategory.append(Array(bookRealmData))
                 
                 
             }
         }
+        print("지금 데이터 상황",bookListInCategory)
         
+        self.libraryCollectionView.reloadData()
 
         
  
@@ -220,6 +233,7 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
             
             searchVC.bookData = bookListInCategory[indexPath.row]
             searchVC.categoryName = categoryArray[indexPath.row].categoryName
+            searchVC.isViewMode = true
             
             self.navigationController?.pushViewController(searchVC, animated: true)
             
@@ -246,7 +260,6 @@ extension ViewController : UICollectionViewDelegate,UICollectionViewDelegateFlow
 
             categoryContainerCell.setName(name: categoryArray[indexPath.row].categoryName, shelves: shelvesData,books: bookListInCategory[indexPath.row])
             
-
 
             
             

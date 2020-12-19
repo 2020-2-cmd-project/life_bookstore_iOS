@@ -30,9 +30,8 @@ class CategoryContainerCollectionCell: UICollectionViewCell {
         self.bookData = books
         
         
+        categoryContainerCollectionView.reloadData()
 
-            
-        
  
     }
     
