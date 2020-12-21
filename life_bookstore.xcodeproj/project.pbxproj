@@ -3,11 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500ECBDC1D7E9F84A216FC5A /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */; };
+		3C4252CA7D6C022385DF51A5 /* Pods_life_bookstore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF62AAECB6538593FCFB1A4E /* Pods_life_bookstore.framework */; };
+		BD1FDDEF2583342F00C6E344 /* BookCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */; };
+		BD1FDDF32583394B00C6E344 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */; };
+		BDC707F6258DF16500BEB92E /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */; };
+		BDC70805258E29C400BEB92E /* BookColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC70804258E29C400BEB92E /* BookColorViewController.swift */; };
+		FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83132524E6C500F53D09 /* Arita-buriL.otf */; };
+		FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */; };
+		FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */; };
+		FD2C831E2524E6C500F53D09 /* Arita-buriB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83172524E6C500F53D09 /* Arita-buriB.otf */; };
+		FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83182524E6C500F53D09 /* Arita-buriM.otf */; };
+		FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */; };
+		FD411A9D258DF20200FEFF3A /* BookSearchCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD411A9C258DF20200FEFF3A /* BookSearchCollectionCell.swift */; };
+		FD7F36462525EC09008ADA28 /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */; };
+		FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB966E925669FDE00DED224 /* DataModel + Realm.swift */; };
+		FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */ = {isa = PBXBuildFile; fileRef = FDD436502524E7D000F96D9E /* Arita-buriSB.otf */; };
+		FDD4365B25257BE400F96D9E /* alertScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */; };
+		FDD4366D2525A15000F96D9E /* CategoryContainerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4366C2525A15000F96D9E /* CategoryContainerCollectionCell.swift */; };
+		FDD436702525A1D700F96D9E /* ShelfContainerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD4366F2525A1D700F96D9E /* ShelfContainerCollectionCell.swift */; };
+		FDD436732525A20C00F96D9E /* BookContainerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD436722525A20C00F96D9E /* BookContainerCollectionCell.swift */; };
+		FDD436762525D46D00F96D9E /* AddCategoryButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD436752525D46D00F96D9E /* AddCategoryButtonCell.swift */; };
 		FDE8AE4224FE003400DC690D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4124FE003400DC690D /* AppDelegate.swift */; };
 		FDE8AE4424FE003400DC690D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4324FE003400DC690D /* SceneDelegate.swift */; };
 		FDE8AE4624FE003400DC690D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE8AE4524FE003400DC690D /* ViewController.swift */; };
@@ -23,9 +42,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
-		E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		1943EB872520461CEFA41BF9 /* Pods-life_bookstore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.debug.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.debug.xcconfig"; sourceTree = "<group>"; };
+		4E7F80F7A0E7F9AB5F3ACD4E /* Pods-life_bookstore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-life_bookstore.release.xcconfig"; path = "Target Support Files/Pods-life_bookstore/Pods-life_bookstore.release.xcconfig"; sourceTree = "<group>"; };
+		BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCategoryViewController.swift; sourceTree = "<group>"; };
+		BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		BDC70804258E29C400BEB92E /* BookColorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookColorViewController.swift; sourceTree = "<group>"; };
+		DF62AAECB6538593FCFB1A4E /* Pods_life_bookstore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_life_bookstore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD2C83132524E6C500F53D09 /* Arita-buriL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriL.otf"; sourceTree = "<group>"; };
+		FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-1.otf"; sourceTree = "<group>"; };
+		FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriHL.otf"; sourceTree = "<group>"; };
+		FD2C83172524E6C500F53D09 /* Arita-buriB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriB.otf"; sourceTree = "<group>"; };
+		FD2C83182524E6C500F53D09 /* Arita-buriM.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arita-buriM.otf"; sourceTree = "<group>"; };
+		FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BareunBatangOTFPro-2.otf"; sourceTree = "<group>"; };
+		FD411A9C258DF20200FEFF3A /* BookSearchCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSearchCollectionCell.swift; sourceTree = "<group>"; };
+		FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arita-buriSB.otf"; path = "life_bookstore/fonts/Arita-buriSB.otf"; sourceTree = "<group>"; };
+		FDB966E925669FDE00DED224 /* DataModel + Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataModel + Realm.swift"; sourceTree = "<group>"; };
+		FDD4364F2524E7D000F96D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Arita-buriSB.otf"; sourceTree = "<group>"; };
+		FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alertScreenExtension.swift; sourceTree = "<group>"; };
+		FDD4366C2525A15000F96D9E /* CategoryContainerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContainerCollectionCell.swift; sourceTree = "<group>"; };
+		FDD4366F2525A1D700F96D9E /* ShelfContainerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShelfContainerCollectionCell.swift; sourceTree = "<group>"; };
+		FDD436722525A20C00F96D9E /* BookContainerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookContainerCollectionCell.swift; sourceTree = "<group>"; };
+		FDD436752525D46D00F96D9E /* AddCategoryButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryButtonCell.swift; sourceTree = "<group>"; };
 		FDE8AE3E24FE003400DC690D /* life_bookstore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = life_bookstore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDE8AE4124FE003400DC690D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDE8AE4324FE003400DC690D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,38 +85,87 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				500ECBDC1D7E9F84A216FC5A /* Pods_life_bookstore.framework in Frameworks */,
+				3C4252CA7D6C022385DF51A5 /* Pods_life_bookstore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		059E911E2931CA15744D722D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF62AAECB6538593FCFB1A4E /* Pods_life_bookstore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		22FCFCB7C688447ABA54BDE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */,
-				A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */,
+				1943EB872520461CEFA41BF9 /* Pods-life_bookstore.debug.xcconfig */,
+				4E7F80F7A0E7F9AB5F3ACD4E /* Pods-life_bookstore.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		43E63F8723A16580523B4454 /* Frameworks */ = {
+		FD2C83222524E6C900F53D09 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
-				A53BC36E2DF77C4143EDCB7F /* Pods_life_bookstore.framework */,
+				FD2C83172524E6C500F53D09 /* Arita-buriB.otf */,
+				FD2C83162524E6C500F53D09 /* Arita-buriHL.otf */,
+				FD2C83132524E6C500F53D09 /* Arita-buriL.otf */,
+				FD2C83182524E6C500F53D09 /* Arita-buriM.otf */,
+				FDD436502524E7D000F96D9E /* Arita-buriSB.otf */,
+				FD2C83142524E6C500F53D09 /* BareunBatangOTFPro-1.otf */,
+				FD2C83192524E6C500F53D09 /* BareunBatangOTFPro-2.otf */,
 			);
-			name = Frameworks;
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		FD411A9B258DF1DE00FEFF3A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FD411A9C258DF20200FEFF3A /* BookSearchCollectionCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FDD43652252578EF00F96D9E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FDD4366C2525A15000F96D9E /* CategoryContainerCollectionCell.swift */,
+				FDD4366F2525A1D700F96D9E /* ShelfContainerCollectionCell.swift */,
+				FDD436722525A20C00F96D9E /* BookContainerCollectionCell.swift */,
+				FDD436752525D46D00F96D9E /* AddCategoryButtonCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FDD4365425257B8400F96D9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDB966E925669FDE00DED224 /* DataModel + Realm.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FDD4365925257BBC00F96D9E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FDD4365A25257BE400F96D9E /* alertScreenExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		FDE8AE3524FE003400DC690D = {
 			isa = PBXGroup;
 			children = (
+				FD7F36452525EC09008ADA28 /* Arita-buriSB.otf */,
 				FDE8AE4024FE003400DC690D /* life_bookstore */,
 				FDE8AE3F24FE003400DC690D /* Products */,
 				22FCFCB7C688447ABA54BDE7 /* Pods */,
-				43E63F8723A16580523B4454 /* Frameworks */,
+				059E911E2931CA15744D722D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,6 +180,8 @@
 		FDE8AE4024FE003400DC690D /* life_bookstore */ = {
 			isa = PBXGroup;
 			children = (
+				FDD4365925257BBC00F96D9E /* Extension */,
+				FD2C83222524E6C900F53D09 /* fonts */,
 				FDE8AE5624FE006100DC690D /* Source */,
 				FDE8AE5524FE004900DC690D /* Resource */,
 				FDE8AE4F24FE003700DC690D /* Info.plist */,
@@ -103,6 +192,7 @@
 		FDE8AE5524FE004900DC690D /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				FDD4365425257B8400F96D9E /* Model */,
 				FDE8AE4A24FE003700DC690D /* Assets.xcassets */,
 				FDE8AE5724FE007800DC690D /* Storyboard */,
 			);
@@ -145,6 +235,7 @@
 		FDE8AE6124FE071000DC690D /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FDD43652252578EF00F96D9E /* Cell */,
 				FDE8AE4524FE003400DC690D /* ViewController.swift */,
 			);
 			path = Home;
@@ -154,6 +245,10 @@
 			isa = PBXGroup;
 			children = (
 				FDE8AE6524FE074100DC690D /* BookWriteViewController.swift */,
+				BD1FDDEE2583342F00C6E344 /* BookCategoryViewController.swift */,
+				BD1FDDF12583394B00C6E344 /* CategoryTableViewCell.swift */,
+				BDC707F4258DF16500BEB92E /* QuestionTableViewCell.swift */,
+				BDC70804258E29C400BEB92E /* BookColorViewController.swift */,
 			);
 			path = Write;
 			sourceTree = "<group>";
@@ -161,6 +256,7 @@
 		FDE8AE6324FE071A00DC690D /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				FD411A9B258DF1DE00FEFF3A /* Cell */,
 				FDE8AE6824FE075000DC690D /* BookSearchViewController.swift */,
 			);
 			path = Search;
@@ -181,11 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDE8AE5224FE003700DC690D /* Build configuration list for PBXNativeTarget "life_bookstore" */;
 			buildPhases = (
-				4076F26683D84698D428F9B4 /* [CP] Check Pods Manifest.lock */,
+				24696F3DCD1AE69344C76D92 /* [CP] Check Pods Manifest.lock */,
 				FDE8AE3A24FE003400DC690D /* Sources */,
 				FDE8AE3B24FE003400DC690D /* Frameworks */,
 				FDE8AE3C24FE003400DC690D /* Resources */,
-				BD26A0538F7A9A0800D334DE /* [CP] Embed Pods Frameworks */,
+				463831BA4CF4D8D3CCFF419D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,10 +330,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD7F36462525EC09008ADA28 /* Arita-buriSB.otf in Resources */,
 				FDE8AE4E24FE003700DC690D /* LaunchScreen.storyboard in Resources */,
+				FDD4364E2524E7D000F96D9E /* Arita-buriSB.otf in Resources */,
+				FD2C831B2524E6C500F53D09 /* BareunBatangOTFPro-1.otf in Resources */,
+				FD2C83202524E6C500F53D09 /* BareunBatangOTFPro-2.otf in Resources */,
 				FDE8AE5A24FE011800DC690D /* bookWrite.storyboard in Resources */,
 				FDE8AE5E24FE013100DC690D /* bookDetail.storyboard in Resources */,
 				FDE8AE4B24FE003700DC690D /* Assets.xcassets in Resources */,
+				FD2C831E2524E6C500F53D09 /* Arita-buriB.otf in Resources */,
+				FD2C831F2524E6C500F53D09 /* Arita-buriM.otf in Resources */,
+				FD2C831A2524E6C500F53D09 /* Arita-buriL.otf in Resources */,
+				FD2C831D2524E6C500F53D09 /* Arita-buriHL.otf in Resources */,
 				FDE8AE4924FE003400DC690D /* Main.storyboard in Resources */,
 				FDE8AE5C24FE012100DC690D /* bookSearch.storyboard in Resources */,
 			);
@@ -246,7 +350,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4076F26683D84698D428F9B4 /* [CP] Check Pods Manifest.lock */ = {
+		24696F3DCD1AE69344C76D92 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,7 +372,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD26A0538F7A9A0800D334DE /* [CP] Embed Pods Frameworks */ = {
+		463831BA4CF4D8D3CCFF419D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,17 +397,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDE8AE4624FE003400DC690D /* ViewController.swift in Sources */,
+				BDC70805258E29C400BEB92E /* BookColorViewController.swift in Sources */,
 				FDE8AE6624FE074100DC690D /* BookWriteViewController.swift in Sources */,
+				FDD4365B25257BE400F96D9E /* alertScreenExtension.swift in Sources */,
 				FDE8AE6B24FE076400DC690D /* BookDetailViewController.swift in Sources */,
 				FDE8AE6924FE075000DC690D /* BookSearchViewController.swift in Sources */,
+				FDD436762525D46D00F96D9E /* AddCategoryButtonCell.swift in Sources */,
+				BDC707F6258DF16500BEB92E /* QuestionTableViewCell.swift in Sources */,
+				BD1FDDEF2583342F00C6E344 /* BookCategoryViewController.swift in Sources */,
+				FDD436732525A20C00F96D9E /* BookContainerCollectionCell.swift in Sources */,
 				FDE8AE4224FE003400DC690D /* AppDelegate.swift in Sources */,
+				FDB966EA25669FDE00DED224 /* DataModel + Realm.swift in Sources */,
 				FDE8AE4424FE003400DC690D /* SceneDelegate.swift in Sources */,
+				FDD436702525A1D700F96D9E /* ShelfContainerCollectionCell.swift in Sources */,
+				FDD4366D2525A15000F96D9E /* CategoryContainerCollectionCell.swift in Sources */,
+				FD411A9D258DF20200FEFF3A /* BookSearchCollectionCell.swift in Sources */,
+				BD1FDDF32583394B00C6E344 /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FDD436502524E7D000F96D9E /* Arita-buriSB.otf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDD4364F2524E7D000F96D9E /* Base */,
+			);
+			name = "Arita-buriSB.otf";
+			sourceTree = "<group>";
+		};
 		FDE8AE4724FE003400DC690D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,7 +562,7 @@
 		};
 		FDE8AE5324FE003700DC690D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E661A3AF38F7F95746B533DE /* Pods-life_bookstore.debug.xcconfig */;
+			baseConfigurationReference = 1943EB872520461CEFA41BF9 /* Pods-life_bookstore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,7 +581,7 @@
 		};
 		FDE8AE5424FE003700DC690D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6B7979818083A2BBDD665D3 /* Pods-life_bookstore.release.xcconfig */;
+			baseConfigurationReference = 4E7F80F7A0E7F9AB5F3ACD4E /* Pods-life_bookstore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
